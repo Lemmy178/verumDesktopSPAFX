@@ -4,8 +4,9 @@
  |     Due Date:  10/18/2019
  |  Description:  ProductConsume 
  |                
- | Deficiencies:  Falta implementar metodos.
-                  Listando funcionando
+ | Deficiencies:  POST inserta datos pero con otros valores.
+                  GET, funciona pero no parsea los objetos devueltos aun
+                  solo JSON crudo.
 
                 http://localhost:8080/VerumRESTSpa/api/product
  *===========================================================================*/
@@ -13,67 +14,48 @@ package com.verum.spa.consume;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import java.util.HashMap;
-import java.util.Map;
+import com.verum.spa.model.Product;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
-
-
+import javax.ws.rs.core.MediaType;
 
 public class ProductConsume {
 
-    public static void main(String[] args) {
-        System.out.println(addProduct("hoal", "hola", 50.5));
-    }
+    //Global variables
+    Client client = ClientBuilder.newClient();
+    WebTarget target;
+    String values = "";
+    GsonBuilder builder = new GsonBuilder();
+    Gson gson = builder.create();
+    Product producto;
 
-    static Client client = ClientBuilder.newClient();
-    static WebTarget target;
-    static String values = "";
-    static GsonBuilder builder = new GsonBuilder();
-    static Gson gson = builder.create();
-
-    public static String addProduct(String proName, String proBrand, double proPrice) {
+    
+    //POST
+    public String addProduct(String proName, String proBrand, double proPrice) {
+        
         target = client.
                 target("http://localhost:8080/VerumRESTSpa/api/product/add");
-        String aux = String.valueOf(proPrice);
+        
+        producto = new Product(proName, proBrand, proPrice);
 
-        Map<String, String> valeurs = new HashMap<String, String>();
-        valeurs.put("proName", proName);
-        valeurs.put("proBrand", proBrand);
-        valeurs.put("proPrice", aux);
-
-//        String json = gson.toJson(valeurs);
         values = target.request()
-                .post((valeurs, MediaType.APPLICATION_JSON),
+                .post(Entity.entity(producto, MediaType.APPLICATION_JSON),
                         String.class);
         
         return values;
     }
-    
-    public static String addProduct2(String proName, String proBrand, double proPrice) {
-        Message newMesage = new Message(4,"hola");
-    }
 
+    //GET
     public String listProduct() {
         //Funcionando
         target = client.
                 target("http://localhost:8080/VerumRESTSpa/api/product/productList");
+        
         values = target.request().get(String.class);
+        
         return values;
     }
 
-//    private static void postUsingRawJSON(WebTarget target) {
-//        String customer = ClientUtil.createCustomerInJSON("Alyssa William",
-//                 "1021 Hweitt Street",
-//                 "343-343-3433");
-//        String response = target.request()
-//                .post(Entity.entity(customer, MediaType.APPLICATION_JSON),
-//                         String.class);
-//        System.out.println("customer created with id: " + response);
-//
-//        //get the new customer
-//        getCustomerById(target, response);
-//
-//    }
 }
