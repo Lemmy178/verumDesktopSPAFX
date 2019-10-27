@@ -9,7 +9,6 @@
 
                 http://localhost:8080/VerumRESTSpa/api/product
  *===========================================================================*/
-
 package com.verum.spa.consume;
 
 import com.google.gson.Gson;
@@ -18,45 +17,50 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
+
+
 
 public class ProductConsume {
 
-    public String addProduct(String proName, String proBrand, double proPrice) {
-        Client client = ClientBuilder.newClient();
-        WebTarget target = client.target("http://localhost:8080/SpaSmartTech/api/product/add");
-        String aux = String.valueOf(proPrice);
+    public static void main(String[] args) {
+        System.out.println(addProduct("hoal", "hola", 50.5));
+    }
 
-        GsonBuilder builder = new GsonBuilder();
-        Gson gson = builder.create();
+    static Client client = ClientBuilder.newClient();
+    static WebTarget target;
+    static String values = "";
+    static GsonBuilder builder = new GsonBuilder();
+    static Gson gson = builder.create();
+
+    public static String addProduct(String proName, String proBrand, double proPrice) {
+        target = client.
+                target("http://localhost:8080/VerumRESTSpa/api/product/add");
+        String aux = String.valueOf(proPrice);
 
         Map<String, String> valeurs = new HashMap<String, String>();
         valeurs.put("proName", proName);
         valeurs.put("proBrand", proBrand);
         valeurs.put("proPrice", aux);
 
-        String json = gson.toJson(valeurs);
-        String response = null;
-        response = target.request()
-                .post(Entity.entity(json, MediaType.APPLICATION_JSON),
+//        String json = gson.toJson(valeurs);
+        values = target.request()
+                .post((valeurs, MediaType.APPLICATION_JSON),
                         String.class);
-        return response;
+        
+        return values;
+    }
+    
+    public static String addProduct2(String proName, String proBrand, double proPrice) {
+        Message newMesage = new Message(4,"hola");
     }
 
     public String listProduct() {
-        Client client = ClientBuilder.newClient();
-        WebTarget target = client.target("http://localhost:8080/VerumRESTSpa/api/product/productList");
-        return target.request(MediaType.APPLICATION_JSON).get(String.class);
-    }
-
-    public String listProduct2() {
-           Client client = ClientBuilder.newClient();
-        WebTarget target = client.
-                  target("http://localhost:8080/VerumRESTSpa/api/product/productList");
-        String s = target.request().get(String.class);
-        return s;
+        //Funcionando
+        target = client.
+                target("http://localhost:8080/VerumRESTSpa/api/product/productList");
+        values = target.request().get(String.class);
+        return values;
     }
 
 //    private static void postUsingRawJSON(WebTarget target) {
