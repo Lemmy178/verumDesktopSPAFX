@@ -3,8 +3,6 @@ package com.verum.spa.gui;
 import com.jfoenix.controls.JFXDrawer;
 import java.io.IOException;
 import java.util.Optional;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXML;

@@ -9,30 +9,15 @@ import javafx.stage.Stage;
 
 public class SideBar extends Application {
 
-    @FXML
-    private JFXButton btnCli;
-
-    @FXML
-    private JFXButton btnEmp;
-
-    @FXML
-    private JFXButton btnSer;
-
-    @FXML
-    private JFXButton btnTre;
-
-    @FXML
-    private JFXButton btnRoo;
-
-    @FXML
-    private JFXButton btnRes;
-
-    @FXML
-    private JFXButton btnSto;
-
-    @FXML
-    private JFXButton btnLogOut;
-
+    @FXML private JFXButton btnCli;
+    @FXML private JFXButton btnEmp;
+    @FXML private JFXButton btnSer;
+    @FXML private JFXButton btnTre;
+    @FXML private JFXButton btnRoo;
+    @FXML private JFXButton btnRes;
+    @FXML private JFXButton btnSto;
+    @FXML private JFXButton btnLogOut;
+    
     FXMLLoader fxml;
     Stage window;
     Scene scene;
@@ -52,5 +37,7 @@ public class SideBar extends Application {
         addListeners();
     }
 
-    public void addListeners(){}
+    public void addListeners(){
+    
+    }
 }
