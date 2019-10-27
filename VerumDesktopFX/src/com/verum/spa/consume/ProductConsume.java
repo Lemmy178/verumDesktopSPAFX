@@ -1,3 +1,15 @@
+/*=============================================================================
+ |       Author:  Ruben
+ |       Course:  Spa
+ |     Due Date:  10/18/2019
+ |  Description:  ProductConsume 
+ |                
+ | Deficiencies:  Falta implementar metodos.
+                  Listando funcionando
+
+                http://localhost:8080/VerumRESTSpa/api/product
+ *===========================================================================*/
+
 package com.verum.spa.consume;
 
 import com.google.gson.Gson;
@@ -12,7 +24,7 @@ import javax.ws.rs.core.MediaType;
 
 public class ProductConsume {
 
-    public static String addProduct(String proName, String proBrand, double proPrice) {
+    public String addProduct(String proName, String proBrand, double proPrice) {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target("http://localhost:8080/SpaSmartTech/api/product/add");
         String aux = String.valueOf(proPrice);
@@ -35,8 +47,16 @@ public class ProductConsume {
 
     public String listProduct() {
         Client client = ClientBuilder.newClient();
-        WebTarget target = client.target("http://localhost:8080/SpaSmartTech/api/product/productList");
+        WebTarget target = client.target("http://localhost:8080/VerumRESTSpa/api/product/productList");
         return target.request(MediaType.APPLICATION_JSON).get(String.class);
+    }
+
+    public String listProduct2() {
+           Client client = ClientBuilder.newClient();
+        WebTarget target = client.
+                  target("http://localhost:8080/VerumRESTSpa/api/product/productList");
+        String s = target.request().get(String.class);
+        return s;
     }
 
 //    private static void postUsingRawJSON(WebTarget target) {
