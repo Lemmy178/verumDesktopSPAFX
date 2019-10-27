@@ -4,24 +4,15 @@
  |     Due Date:  10/27/2019
  |  Description:  PRODUCTWINDOW
  |                
- | Deficiencies:  Falta optimizar codigo lateral, ya que se replicaria en
-                  muchas clases.
+ | Deficiencies:  Pestana product sin construir
  *===========================================================================*/
-
 package com.verum.spa.gui;
 
 import com.jfoenix.controls.JFXDrawer;
-import java.io.IOException;
-import java.util.Optional;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class ProductWindow extends Application {
@@ -31,6 +22,11 @@ public class ProductWindow extends Application {
     FXMLLoader fxml;
     Stage window;
     Scene scene;
+
+    
+    //Se importa el objeto sideBar, que se separo en otra clase para optimizar el 
+    //codigo
+    SideBarControl sideBar;
 
     public ProductWindow() {
         fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/ProductWindow.fxml"));
@@ -44,47 +40,7 @@ public class ProductWindow extends Application {
         window = primaryStage;
         window.setScene(scene);
         window.show();
-        menu();
+        sideBar = new SideBarControl(drawer);
     }
 
-    public void menu() throws IOException {
-        try {
-            VBox box = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/SideBar.fxml"));
-            drawer.setSidePane(box);
-            drawer.open();
-            for (Node node : box.getChildren()) {
-                if (node.getAccessibleText() != null) {
-                    node.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
-                        switch (node.getAccessibleText()) {
-                            case "CLIENT":
-                                break;
-                            case "EMPLOYEE":
-                                break;
-                            case "TREATMENT":
-                                break;
-                            case "SALON":
-                                break;
-                            case "RESERVATION":
-                                break;
-                            case "STORE":
-                                break;
-                            case "LOGOUT":
-                                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                                alert.setTitle("Confirmacion de salir");
-                                alert.setHeaderText("Confirmar Salida");
-                                alert.setContentText("¿Esta seguro de salir?");
-
-                                Optional<ButtonType> result = alert.showAndWait();
-                                if (result.get() == ButtonType.OK) {
-                                    Platform.exit();
-                                }
-                                break;
-                        }
-                    });
-                }
-            }
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
 }
