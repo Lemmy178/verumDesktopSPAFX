@@ -23,7 +23,6 @@ public class ProductWindow extends Application {
     Stage window;
     Scene scene;
 
-    
     //Se importa el objeto sideBar, que se separo en otra clase para optimizar el 
     //codigo
     SideBarControl sideBar;
