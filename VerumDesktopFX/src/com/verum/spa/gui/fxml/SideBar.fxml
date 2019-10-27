@@ -8,7 +8,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="190.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <JFXButton id="accessBtn" fx:id="btnCli" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Cliente" textFill="WHITE">
+      <JFXButton id="accessBtn" fx:id="btnCli" accessibleText="CLIENT" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Cliente" textFill="WHITE">
          <font>
             <Font size="29.0" />
          </font>
@@ -20,7 +20,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton id="accessBtn" fx:id="btnEmp" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Empleado" textFill="WHITE">
+      <JFXButton id="accessBtn" fx:id="btnEmp" accessibleText="EMPLOYEE" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Empleado" textFill="WHITE">
          <font>
             <Font size="29.0" />
          </font>
@@ -32,7 +32,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton id="accessBtn" fx:id="btnSer" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Servicio" textFill="WHITE">
+      <JFXButton id="accessBtn" fx:id="btnSer" accessibleText="SERVICE" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Servicio" textFill="WHITE">
          <font>
             <Font size="29.0" />
          </font>
@@ -44,7 +44,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton id="accessBtn" fx:id="btnTre" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Tratamiento" textFill="WHITE">
+      <JFXButton id="accessBtn" fx:id="btnTre" accessibleText="TREATMENT" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Tratamiento" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
@@ -56,7 +56,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton id="accessBtn" fx:id="btnRoo" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sala" textFill="WHITE">
+      <JFXButton id="accessBtn" fx:id="btnRoo" accessibleText="SALON" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sala" textFill="WHITE">
          <font>
             <Font size="31.0" />
          </font>
@@ -68,7 +68,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton id="accessBtn" fx:id="btnRes" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Reservacion" textFill="WHITE">
+      <JFXButton id="accessBtn" fx:id="btnRes" accessibleText="RESERVATION" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Reservacion" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
@@ -80,7 +80,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton id="accessBtn" fx:id="btnSto" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sucursal" textFill="WHITE">
+      <JFXButton id="accessBtn" fx:id="btnSto" accessibleText="STORE" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sucursal" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
@@ -92,7 +92,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton id="accessBtn" fx:id="btnLogOut" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Salir" textFill="WHITE">
+      <JFXButton id="accessBtn" fx:id="btnLogOut" accessibleText="LOGOUT" buttonType="RAISED" contentDisplay="TOP" prefHeight="103.0" prefWidth="196.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Salir" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>

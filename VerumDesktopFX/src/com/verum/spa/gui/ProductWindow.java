@@ -1,3 +1,13 @@
+/*=============================================================================
+ |       Author:  Erick Ruben Ramos Vazquez
+ |       Course:  DESKTOP FX SPA
+ |     Due Date:  10/27/2019
+ |  Description:  PRODUCTWINDOW
+ |                
+ | Deficiencies:  Falta optimizar codigo lateral, ya que se replicaria en
+                  muchas clases.
+ *===========================================================================*/
+
 package com.verum.spa.gui;
 
 import com.jfoenix.controls.JFXDrawer;
@@ -21,8 +31,8 @@ public class ProductWindow extends Application {
     FXMLLoader fxml;
     Stage window;
     Scene scene;
-    
-    public ProductWindow(){
+
+    public ProductWindow() {
         fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/ProductWindow.fxml"));
         fxml.setController(this);
     }
@@ -46,13 +56,17 @@ public class ProductWindow extends Application {
                 if (node.getAccessibleText() != null) {
                     node.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
                         switch (node.getAccessibleText()) {
-                            case "SALES":
+                            case "CLIENT":
                                 break;
-                            case "GRAPHICS":
+                            case "EMPLOYEE":
                                 break;
-                            case "INVENTORY":
+                            case "TREATMENT":
                                 break;
-                            case "ADMIN":
+                            case "SALON":
+                                break;
+                            case "RESERVATION":
+                                break;
+                            case "STORE":
                                 break;
                             case "LOGOUT":
                                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
