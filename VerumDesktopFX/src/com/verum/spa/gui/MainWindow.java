@@ -1,22 +1,20 @@
 package com.verum.spa.gui;
 
 import com.jfoenix.controls.JFXButton;
-import java.awt.Paint;
 import java.io.IOException;
-import static java.lang.String.valueOf;
 import java.util.Optional;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -39,13 +37,14 @@ public class MainWindow extends Application {
     @FXML
     private VBox vBox;
     @FXML
-    private AnchorPane anchorPane;
+    private BorderPane borderPanee;
 
     FXMLLoader fxml;
     Stage window;
     Scene scene;
+    Parent root = null;
 
-    public MainWindow() {
+    public MainWindow() throws IOException {
         fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/MainWindow.fxml"));
         fxml.setController(this);
     }
@@ -61,12 +60,14 @@ public class MainWindow extends Application {
     }
 
     public void options() throws IOException {
+        //Aqui se menajean las opciones de la barra lateral...
         for (Node node : vBox.getChildren()) {
             if (node.getAccessibleText() != null) {
                 node.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
                     switch (node.getAccessibleText()) {
+                        //Se obtienen los nodos por medio del accessible text, que se puede modificar desde SceneBuilder
+                        //en propeties
                         case "CLIENT":
-                            anchorPane.getChildren().setAll(FXMLLoader.load("/com/verum/spa/gui/fxml/MainWindow.fxml"));
                             break;
                         case "EMPLOYEE":
                             break;
@@ -78,6 +79,17 @@ public class MainWindow extends Application {
                             break;
                         case "STORE":
                             break;
+                        case "PRODUCT": {
+                            //Se carga en el objeto parent la localizacion de nuestro archivo 
+                            //y se le indica que va a ir en el border pane en la posicion del centro.
+                            try {
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/ProductWindow.fxml"));
+                                borderPanee.setCenter(root);
+                            } catch (IOException ex) {
+                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+
                         case "LOGOUT":
                             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                             alert.setTitle("Confirmacion de salir");
