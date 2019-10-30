@@ -65,11 +65,6 @@ public class MainWindow extends Application {
             if (node.getAccessibleText() != null) {
                 node.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
                     switch (node.getAccessibleText()) {
-                        /*
-                            1380    780
-                        */
-                        //Se obtienen los nodos por medio del accessible text, que se puede modificar desde SceneBuilder
-                        //en propeties
                         case "CLIENT":
                             break;
                         case "EMPLOYEE":
@@ -83,28 +78,28 @@ public class MainWindow extends Application {
                         case "STORE":
                             break;
                         case "PRODUCT": {
-                            //Se carga en el objeto parent la localizacion de nuestro archivo 
-                            //y se le indica que va a ir en el border pane en la posicion del centro.
                             try {
+                                ProductWindow pro = new ProductWindow();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/ProductWindow.fxml"));
                                 borderPanee.setCenter(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
-
-                        case "LOGOUT":
-                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                            alert.setTitle("Confirmacion de salir");
-                            alert.setHeaderText("Confirmar Salida");
-                            alert.setContentText("¿Esta seguro de salir?");
-
-                            Optional<ButtonType> result = alert.showAndWait();
-                            if (result.get() == ButtonType.OK) {
-                                Platform.exit();
-                            }
-                            break;
+                        break;
                     }
+//                        case "LOGOUT":
+//                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+//                            alert.setTitle("Confirmacion de salir");
+//                            alert.setHeaderText("Confirmar Salida");
+//                            alert.setContentText("¿Esta seguro de salir?");
+//
+//                            Optional<ButtonType> result = alert.showAndWait();
+//                            if (result.get() == ButtonType.OK) {
+//                                Platform.exit();
+//                            }
+//                            break;
+//                    }
                 });
             }
         }
