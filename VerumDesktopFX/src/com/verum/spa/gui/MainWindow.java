@@ -65,6 +65,9 @@ public class MainWindow extends Application {
             if (node.getAccessibleText() != null) {
                 node.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
                     switch (node.getAccessibleText()) {
+                        /*
+                            1380    780
+                        */
                         //Se obtienen los nodos por medio del accessible text, que se puede modificar desde SceneBuilder
                         //en propeties
                         case "CLIENT":

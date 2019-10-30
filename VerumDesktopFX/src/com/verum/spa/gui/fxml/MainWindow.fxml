@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -109,25 +111,35 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton id="accessBtn" fx:id="btnLogOutt" accessibleText="LOGOUT" buttonType="RAISED" contentDisplay="TOP" prefHeight="80.0" prefWidth="206.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Cerrar Sesion" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <graphic>
-                  <ImageView fx:id="btnSal11" fitHeight="83.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../resources/logout.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
          </children>
       </VBox>
    </left>
    <top>
       <HBox id="nav" prefHeight="100.0" prefWidth="200.0" stylesheets="@../css/GeneralStyles.css" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="102.0" prefWidth="199.0" text="Logo de la empresa" />
+            <Label prefHeight="100.0" prefWidth="159.0" text="Logo de la empresa" />
+            <ImageView fitHeight="59.0" fitWidth="157.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/avartar.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="BOTTOM" text="Usuario que inicio sesion">
+               <HBox.margin>
+                  <Insets top="43.0" />
+               </HBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="51.0" translateX="1145.0">
+               <HBox.margin>
+                  <Insets top="28.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children></HBox>
    </top>
 </BorderPane>

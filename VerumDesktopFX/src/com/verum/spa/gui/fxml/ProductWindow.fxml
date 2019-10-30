@@ -1,80 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXCheckBox?>
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="796.0" prefWidth="1169.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <TabPane prefHeight="807.0" prefWidth="1258.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-        <tabs>
-          <Tab text="Administrar">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="775.0" prefWidth="1258.0">
-                     <children>
-                        <JFXButton id="btnWarning" fx:id="btnAct" buttonType="RAISED" layoutX="210.0" layoutY="111.0" prefHeight="60.0" prefWidth="137.0" ripplerFill="#f1ae27" stylesheets="@../css/GeneralStyles.css" text="Actualizar" />
-                        <JFXButton id="btnInfo" fx:id="btnAgr" buttonType="RAISED" layoutX="39.0" layoutY="111.0" prefHeight="60.0" prefWidth="137.0" ripplerFill="#01ae46" stylesheets="@../css/GeneralStyles.css" text="Agregar" />
-                        <JFXTextField focusColor="#76bd38" labelFloat="true" layoutX="39.0" layoutY="27.0" prefHeight="52.0" prefWidth="1019.0" text="Buscar por ID, nombre de producto" unFocusColor="#89cb4e" />
-                        <JFXButton id="searchBtn" buttonType="RAISED" layoutX="1069.0" layoutY="25.0" prefHeight="55.0" prefWidth="70.0" stylesheets="@../css/GeneralStyles.css">
-                           <font>
-                              <Font size="1.0" />
-                           </font>
-                        </JFXButton>
-                        <ImageView fitHeight="78.0" fitWidth="46.0" layoutX="1081.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../resources/search.png" />
-                           </image>
-                        </ImageView>
-                        <JFXButton id="btnDanger" fx:id="btnCan" buttonType="RAISED" layoutX="1001.0" layoutY="111.0" prefHeight="60.0" prefWidth="137.0" ripplerFill="#f1ae27" stylesheets="@../css/GeneralStyles.css" text="Cancelar" />
-                        <JFXTextField fx:id="txtIdPro" editable="false" focusColor="#76bd38" layoutX="66.0" layoutY="245.0" prefHeight="50.0" prefWidth="243.0" unFocusColor="#89cb4e" />
-                        <Label layoutX="68.0" layoutY="229.0" text="Id. Producto" />
-                        <Label layoutX="68.0" layoutY="344.0" text="Nombre" />
-                        <JFXTextField fx:id="txtNom" editable="false" focusColor="#76bd38" layoutX="66.0" layoutY="369.0" prefHeight="50.0" prefWidth="422.0" unFocusColor="#89cb4e" />
-                        <JFXTextField fx:id="txtNom1" editable="false" focusColor="#76bd38" layoutX="66.0" layoutY="499.0" prefHeight="50.0" prefWidth="424.0" unFocusColor="#89cb4e" />
-                        <Label layoutX="68.0" layoutY="483.0" text="Precio" />
-                        <JFXComboBox focusColor="#76bd38" layoutX="717.0" layoutY="256.0" prefHeight="49.0" prefWidth="261.0" unFocusColor="#89cb4e" />
-                        <Label layoutX="717.0" layoutY="237.0" text="Marca" />
-                        <JFXCheckBox checkedColor="#76bd38" layoutX="717.0" layoutY="506.0" prefHeight="52.0" prefWidth="144.0" text="Activo" unCheckedColor="#89cb4e">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </JFXCheckBox>
-                        <JFXTextField fx:id="txtNom2" editable="false" focusColor="#76bd38" layoutX="713.0" layoutY="369.0" prefHeight="50.0" prefWidth="269.0" unFocusColor="#89cb4e" />
-                        <Label layoutX="717.0" layoutY="344.0" text="Cantidad" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-          <Tab text="Listado">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <TableView prefHeight="763.0" prefWidth="1169.0">
-                          <columns>
-                            <TableColumn prefWidth="112.99996948242188" text="ID" />
-                            <TableColumn prefWidth="295.0" text="Nombre" />
-                              <TableColumn minWidth="0.0" prefWidth="419.0" text="Marca" />
-                              <TableColumn prefWidth="194.0" text="Cantidad" />
-                              <TableColumn prefWidth="147.0" text="Estatus" />
-                          </columns>
-                        </TableView>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-        </tabs>
-      </TabPane>
-   </top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1380.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="780.0" prefWidth="1062.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton id="glass-grey" buttonType="RAISED" layoutX="41.0" layoutY="41.0" prefHeight="48.0" prefWidth="127.0" stylesheets="@../css/GeneralStyles.css" text="Agregar" />
+         </children>
+      </AnchorPane>
+   </left>
 </BorderPane>
