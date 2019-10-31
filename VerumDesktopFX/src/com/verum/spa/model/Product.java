@@ -10,68 +10,67 @@ package com.verum.spa.model;
 
 public class Product {
 
-    private int idPro;
-    private String proName;
-    private String proBrand;
-    private double proPrice;
-    private boolean proStatus;
+    private int prodId;
+    private String prodName;
+    private String brand;
+    private int prodStatus;
+    private double useCost;
 
     public Product() {
     }
 
-    public Product(int idPro, String proName, String proBrand, double proPrice, boolean proStatus) {
-        this.idPro = idPro;
-        this.proName = proName;
-        this.proBrand = proBrand;
-        this.proPrice = proPrice;
-        this.proStatus = proStatus;
+    public Product(int prodId, String prodName, String brand, int prodStatus, double useCost) {
+        this.prodId = prodId;
+        this.prodName = prodName;
+        this.brand = brand;
+        this.prodStatus = prodStatus;
+        this.useCost = useCost;
     }
 
-    //Constructor para addProduct
-    public Product(String proName, String proBrand, double proPrice) {
-        this.proName = proName;
-        this.proBrand = proBrand;
-        this.proPrice = proPrice;
+    public Product(String prodName, String brand, double useCost) {
+        this.prodName = prodName;
+        this.brand = brand;
+        this.useCost = useCost;
     }
 
-    public int getIdPro() {
-        return idPro;
+    public int getProdId() {
+        return prodId;
     }
 
-    public void setIdPro(int idPro) {
-        this.idPro = idPro;
+    public void setProdId(int prodId) {
+        this.prodId = prodId;
     }
 
-    public String getProName() {
-        return proName;
+    public String getProdName() {
+        return prodName;
     }
 
-    public void setProName(String proName) {
-        this.proName = proName;
+    public void setProdName(String prodName) {
+        this.prodName = prodName;
     }
 
-    public String getProBrand() {
-        return proBrand;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setProBrand(String proBrand) {
-        this.proBrand = proBrand;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public double getProPrice() {
-        return proPrice;
+    public int getProdStatus() {
+        return prodStatus;
     }
 
-    public void setProPrice(double proPrice) {
-        this.proPrice = proPrice;
+    public void setProdStatus(int prodStatus) {
+        this.prodStatus = prodStatus;
     }
 
-    public boolean isProStatus() {
-        return proStatus;
+    public double getUseCost() {
+        return useCost;
     }
 
-    public void setProStatus(boolean proStatus) {
-        this.proStatus = proStatus;
+    public void setUseCost(double useCost) {
+        this.useCost = useCost;
     }
 
 }
