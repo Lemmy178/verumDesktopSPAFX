@@ -5,7 +5,8 @@
  |  Description:  Product Model
  |                
  | Deficiencies:  Funcionado. Valores se repiten en BD despues de tiempo.
-                  Solo basta con crear otra clase y todo se soluciona
+                  Solo basta con crear otra clase y todo se soluciona.
+                  Preguntar si producto va a llevar cantidad.
  *===========================================================================*/
 package com.verum.spa.consumeREST;
 
@@ -25,19 +26,27 @@ public class ProductConsumeREST {
     String values = "";
     GsonBuilder builder = new GsonBuilder();
     Gson gson = builder.create();
-    Product pro = new Product();
+//    Product pro = new Product();
 
     //ADD
-    public String addProduct(String prodName, String brand, double useCost) {
-        pro.setProdName(prodName);
-        pro.setBrand(brand);
-        pro.setUseCost(useCost);
-
+    public String addProduct(Product pro) {
         target = client.
                 target("http://localhost:8080/VerumRESTSpa/api/product/add");
         values = target.request()
                 .post(Entity.entity(pro, MediaType.APPLICATION_JSON),
                         String.class);
+        return values;
+    }
+
+    public String modifyProduct(Product pro) {
+        target = client.target("http://localhost:8080/VerumRESTSpa/api/product/modify");
+        values = target.request().put(Entity.entity(pro, MediaType.APPLICATION_JSON), String.class);
+        return values;
+    }
+
+    public String logicalDeleteProduct(Product pro) {
+        target = client.target("http://localhost:8080/VerumRESTSpa/api/product/logDelete");
+        values = target.request().put(Entity.entity(pro, MediaType.APPLICATION_JSON), String.class);
         return values;
     }
 

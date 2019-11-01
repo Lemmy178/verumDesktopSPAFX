@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="748.0" prefWidth="1041.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Listado de productos">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Text layoutX="719.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar Producto">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TextField editable="false" layoutX="663.0" layoutY="139.0" prefHeight="47.0" prefWidth="372.0" />
+      <Text layoutX="664.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <TextField editable="false" layoutX="663.0" layoutY="222.0" prefHeight="47.0" prefWidth="372.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <JFXTreeTableView layoutX="14.0" layoutY="138.0" prefHeight="594.0" prefWidth="638.0" />
+      <Text layoutX="664.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <TextField editable="false" layoutX="666.0" layoutY="304.0" prefHeight="47.0" prefWidth="171.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField editable="false" layoutX="856.0" layoutY="304.0" prefHeight="47.0" prefWidth="171.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <Text layoutX="856.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="669.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Line endX="266.0" fill="BLACK" layoutX="768.0" layoutY="363.0" startX="-100.0" strokeWidth="3.0" />
+      <Text layoutX="762.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valores Actuales">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="768.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuevos Valores">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <JFXTextField focusColor="#009551" layoutX="668.0" layoutY="431.0" prefHeight="31.0" prefWidth="356.0" promptText="Nombre" unFocusColor="#00a65a">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <Line endX="266.0" fill="BLACK" layoutX="767.0" layoutY="59.0" startX="-100.0" />
+      <ComboBox layoutX="668.0" layoutY="523.0" prefHeight="38.0" prefWidth="356.0" />
+      <Text layoutX="669.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXTextField focusColor="#009551" layoutX="668.0" layoutY="587.0" prefHeight="47.0" prefWidth="155.0" promptText="Cantidad" unFocusColor="#00a65a">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="#009551" layoutX="872.0" layoutY="587.0" prefHeight="47.0" prefWidth="155.0" promptText="Precio" unFocusColor="#00a65a">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton id="glass-grey" buttonType="RAISED" layoutX="762.0" layoutY="660.0" prefHeight="54.0" prefWidth="167.0" ripplerFill="#019751" stylesheets="@../css/GeneralStyles.css" text="Actualizar" />
+      <JFXButton id="glass-grey-wrong" buttonType="RAISED" layoutX="950.0" layoutY="701.0" ripplerFill="#e30b0b" stylesheets="@../css/GeneralStyles.css" text="Cancelar" />
+      <JFXTextField focusColor="#009551" layoutX="15.0" layoutY="78.0" prefHeight="47.0" prefWidth="613.0" promptText="Filtrar por nombre de producto o marca" unFocusColor="#00a65a">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

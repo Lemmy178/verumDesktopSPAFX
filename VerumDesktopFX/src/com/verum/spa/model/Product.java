@@ -33,6 +33,10 @@ public class Product {
         this.useCost = useCost;
     }
 
+    public Product(String sales_Department, String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getProdId() {
         return prodId;
     }

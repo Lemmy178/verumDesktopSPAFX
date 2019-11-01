@@ -2,19 +2,16 @@ package com.verum.spa.gui;
 
 import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
-import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -39,6 +36,9 @@ public class MainWindow extends Application {
     @FXML
     private BorderPane borderPanee;
 
+    @FXML
+    private Pane pane;
+    
     FXMLLoader fxml;
     Stage window;
     Scene scene;

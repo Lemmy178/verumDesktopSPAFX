@@ -1,4 +1,5 @@
 /*
+Colores de bootstrap
 danger-color
 #ff4444
 danger-color-dark
@@ -78,7 +79,7 @@ info-color-dark
 
 #glass-grey {
     -fx-background-color: 
-        #c3c4c4,
+        #009551,
         linear-gradient(#d6d6d6 50%, white 100%),
         radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
     -fx-background-radius: 30;
@@ -86,9 +87,27 @@ info-color-dark
     -fx-text-fill: black;
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
 }
+
 #glass-grey:hover{
     -fx-background-color: 
         #00a65a,
+        linear-gradient(#d6d6d6 50%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+}
+#glass-grey-wrong{
+    -fx-background-color: 
+        #e30b0b,
+        linear-gradient(#d6d6d6 50%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+}
+
+#glass-grey-wrong:hover{
+    -fx-background-color: 
+        #e30b0b,
         linear-gradient(#d6d6d6 50%, white 100%),
         radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
 }
