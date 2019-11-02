@@ -1,17 +1,25 @@
+/*=============================================================================
+ |       Author:  Erick Ruben Ramos Vazquez
+ |       Course:  Spa
+ |     Due Date:  10/31/2019
+ |  Description:  Product Controller
+ |                
+ | Deficiencies:  Ninguna detectada. Se hace el control de entrada del usuario  
+                  antes de mandar valores a BD
+ *===========================================================================*/
 package com.verum.spa.consume.controller;
 
 import com.verum.spa.consumeREST.ProductConsumeREST;
 import com.verum.spa.model.Product;
-import java.util.ArrayList;
 
 public class ProductController {
 
-    private Product pro = new Product();
-    private ProductConsumeREST proREST = new ProductConsumeREST();
+    private static Product pro = new Product();
+    private static ProductConsumeREST proREST = new ProductConsumeREST();
 
     public String addProductController(String proName, String brand, double useCost) {
         if (proName.trim().length() > 255 && brand.trim().length() > 255) {
-            return "El maximo de caracteres para Nombre de producto y Marca es de 255";
+            return "El maximo de caracteres para Nombre de producto y marca es de 255";
         } else {
             pro.setProdName(proName);
             pro.setBrand(brand);
@@ -36,9 +44,10 @@ public class ProductController {
         pro.setProdId(proID);
         return proREST.logicalDeleteProduct(pro);
     }
-
-    public ArrayList<Product> productList() {
-        return null;
-    }
+//
+//    public Product productList() {
+//        JsonObject jsonResposne = new JsonObject(proREST.listProduct());
+//
+//    }
 
 }

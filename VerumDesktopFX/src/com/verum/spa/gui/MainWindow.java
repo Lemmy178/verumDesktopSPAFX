@@ -1,3 +1,11 @@
+/*=============================================================================
+ |       Author:  Erick Ruben Ramos Vazquez
+ |       Course:  Spa
+ |     Due Date:  10/18/2019
+ |  Description:  MainWindow
+ |                
+ | Deficiencies:  Falta completar la barra superior
+ *===========================================================================*/
 package com.verum.spa.gui;
 
 import com.jfoenix.controls.JFXButton;
@@ -10,42 +18,37 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class MainWindow extends Application {
 
-    @FXML
-    private JFXButton btnLogOut;
-    @FXML
-    private JFXButton btnCli;
-    @FXML
-    private JFXButton btnEmp;
-    @FXML
-    private JFXButton btnSer;
-    @FXML
-    private JFXButton btnTre;
-    @FXML
-    private JFXButton btnRes;
-    @FXML
-    private JFXButton btnSto;
-    @FXML
-    private VBox vBox;
-    @FXML
-    private BorderPane borderPanee;
+  
+    @FXML private BorderPane borderPanee;
+    @FXML private VBox vBoxSide;
+    @FXML private JFXButton btnCli;
+    @FXML private JFXButton btnEmp;
+    @FXML private JFXButton btnSer;
+    @FXML private JFXButton btnTre;
+    @FXML private JFXButton btnRes;
+    @FXML private JFXButton btnSal;
+    @FXML private ImageView btnSale;
+    @FXML private JFXButton btnSto;
+    @FXML private ImageView btnSal1;
+    @FXML private JFXButton btnPro;
+    @FXML private ImageView btnSale1;
+    @FXML private HBox hBoxTop;
 
-    @FXML
-    private Pane pane;
-    
     FXMLLoader fxml;
     Stage window;
     Scene scene;
     Parent root = null;
 
     public MainWindow() throws IOException {
-        fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/MainWindow.fxml"));
+        fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/main_Window.fxml"));
         fxml.setController(this);
     }
 
@@ -60,8 +63,7 @@ public class MainWindow extends Application {
     }
 
     public void options() throws IOException {
-        //Aqui se menajean las opciones de la barra lateral...
-        for (Node node : vBox.getChildren()) {
+        for (Node node : vBoxSide.getChildren()) {
             if (node.getAccessibleText() != null) {
                 node.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
                     switch (node.getAccessibleText()) {
@@ -80,7 +82,7 @@ public class MainWindow extends Application {
                         case "PRODUCT": {
                             try {
                                 ProductWindow pro = new ProductWindow();
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/ProductWindow.fxml"));
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window.fxml"));
                                 borderPanee.setCenter(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
@@ -88,18 +90,6 @@ public class MainWindow extends Application {
                         }
                         break;
                     }
-//                        case "LOGOUT":
-//                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-//                            alert.setTitle("Confirmacion de salir");
-//                            alert.setHeaderText("Confirmar Salida");
-//                            alert.setContentText("¿Esta seguro de salir?");
-//
-//                            Optional<ButtonType> result = alert.showAndWait();
-//                            if (result.get() == ButtonType.OK) {
-//                                Platform.exit();
-//                            }
-//                            break;
-//                    }
                 });
             }
         }

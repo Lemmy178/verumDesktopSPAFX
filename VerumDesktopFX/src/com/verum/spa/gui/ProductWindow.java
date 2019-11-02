@@ -1,3 +1,11 @@
+/*=============================================================================
+ |       Author:  Erick Ruben Ramos Vazquez
+ |       Course:  Spa
+ |     Due Date:  10/28/2019
+ |  Description:  ProductWindow
+ |                
+ | Deficiencies:  No por el momento
+ *===========================================================================*/
 package com.verum.spa.gui;
 
 import com.jfoenix.controls.JFXButton;
@@ -42,6 +50,11 @@ public class ProductWindow implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         addListeners();
+        try {
+            windowDefautl();
+        } catch (IOException ex) {
+            Logger.getLogger(ProductWindow.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void addListeners() {
@@ -51,8 +64,7 @@ public class ProductWindow implements Initializable {
                     switch (node.getAccessibleText()) {
                         case "addProduct":
                             try {
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/ProductWindowAdd.fxml"));
-//                                proBorderPane.setCenter(root);
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Add.fxml"));
                                 proBorderPane.setCenter(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
@@ -60,19 +72,30 @@ public class ProductWindow implements Initializable {
                             break;
                         case "admProduct":
                             try {
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/ProductWindowModify.fxml"));
-//                                proBorderPane.setCenter(root);
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Modify.fxml"));
                                 proBorderPane.setCenter(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
                             }
                             break;
                         case "listProduct":
+                            try {
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_List.fxml"));
+                                proBorderPane.setCenter(root);
+                            } catch (IOException ex) {
+                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                            }
                             break;
                     }
                 });
             }
         }
+
+    }
+
+    public void windowDefautl() throws IOException {
+        root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Modify.fxml"));
+        proBorderPane.setCenter(root);
     }
 
 }

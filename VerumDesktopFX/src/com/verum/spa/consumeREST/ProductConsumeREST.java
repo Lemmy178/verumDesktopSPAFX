@@ -50,7 +50,7 @@ public class ProductConsumeREST {
         return values;
     }
 
-    public String listProduct() {
+    public  String listProduct() {
         target = client.
                 target("http://localhost:8080/VerumRESTSpa/api/product/productList");
         values = target.request().get(String.class);
