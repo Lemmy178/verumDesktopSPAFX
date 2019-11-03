@@ -1,8 +1,8 @@
 /*=============================================================================
- |       Author:  Erick Ruben Ramos Vazquez
+ |       Author:  Ricardo Iván Ramírez Bello
  |       Course:  Spa
- |     Due Date:  10/28/2019
- |  Description:  ProductWindow
+ |     Due Date:  11/03/2019
+ |  Description:  RoomWindow
  |                
  | Deficiencies:  No por el momento
  *===========================================================================*/

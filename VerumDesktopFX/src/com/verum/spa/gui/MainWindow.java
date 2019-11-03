@@ -1,5 +1,6 @@
 /*=============================================================================
  |       Author:  Erick Ruben Ramos Vazquez
+                  Ricardo Iván Ramírez Bello
  |       Course:  Spa
  |     Due Date:  10/18/2019
  |  Description:  MainWindow
