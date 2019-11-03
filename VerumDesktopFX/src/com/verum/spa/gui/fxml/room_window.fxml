@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -71,13 +74,22 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="1000.0">
                      <children>
-                        <AnchorPane prefHeight="2000.0" prefWidth="410.0" style="-fx-background-color: #05fe45;" />
+                        <AnchorPane prefHeight="2000.0" prefWidth="410.0">
+                           <children>
+                              <JFXTreeTableView layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                           </children></AnchorPane>
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="1000.0">
                      <children>
-                        <AnchorPane prefHeight="1000.0" prefWidth="200.0" style="-fx-background-color: #cbacba;" />
-                        <AnchorPane prefHeight="1000.0" prefWidth="200.0" style="-fx-background-color: #abcabc;" />
+                        <AnchorPane prefHeight="1000.0" prefWidth="200.0" />
+                        <AnchorPane prefHeight="1000.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField labelFloat="true" layoutX="213.0" layoutY="18.0" prefHeight="31.0" prefWidth="212.0" promptText="Name" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="22.0" />
+                              <JFXTextArea labelFloat="true" layoutX="213.0" layoutY="82.0" prefHeight="138.0" prefWidth="212.0" promptText="Description" AnchorPane.bottomAnchor="80.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="80.0" />
+                              <JFXTextField labelFloat="true" layoutX="213.0" layoutY="247.0" prefHeight="31.0" prefWidth="212.0" promptText="Status" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="19.0" />
+                              <ImageView fitHeight="256.0" fitWidth="136.0" layoutX="1.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="252.0" AnchorPane.topAnchor="22.0" />
+                           </children></AnchorPane>
                      </children>
                   </VBox>
                </children>
