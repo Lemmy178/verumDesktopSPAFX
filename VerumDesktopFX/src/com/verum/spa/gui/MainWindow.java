@@ -73,7 +73,15 @@ public class MainWindow extends Application {
                             break;
                         case "TREATMENT":
                             break;
-                        case "SALON":
+                        case "SALON":{
+                            try {
+                                RoomWindow room = new RoomWindow();
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/room_window.fxml"));
+                                borderPanee.setCenter(root);
+                            } catch (IOException ex) {
+                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
                             break;
                         case "RESERVATION":
                             break;
