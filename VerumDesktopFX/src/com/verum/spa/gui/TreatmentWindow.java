@@ -38,6 +38,7 @@ public class TreatmentWindow implements Initializable {
     @FXML Button btnAdd;
     @FXML Button btnUpdate;
     @FXML Button btnDelete;
+    @FXML Button btnUpdateList;
     
     @FXML VBox vBox;
     

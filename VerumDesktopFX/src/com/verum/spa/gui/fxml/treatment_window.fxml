@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.verum.spa.gui.RoomWindow">
+<BorderPane prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.verum.spa.gui.TreatmentWindow">
    <right>
       <VBox fx:id="vBox" alignment="CENTER" prefWidth="203.0" BorderPane.alignment="CENTER">
          <children>
@@ -93,7 +93,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </JFXCheckBox>
-                              <JFXButton id="listButton" buttonType="RAISED" contentDisplay="CENTER" layoutX="14.0" layoutY="69.0" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/Product.css" text=" " AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="67.0">
+                              <JFXButton id="listButton" fx:id="btnUpdateList" buttonType="RAISED" contentDisplay="CENTER" layoutX="14.0" layoutY="69.0" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/Product.css" text=" " AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="67.0">
                                  <graphic>
                                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
