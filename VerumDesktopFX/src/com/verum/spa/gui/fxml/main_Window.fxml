@@ -51,12 +51,12 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnTre" accessibleText="RESERVATION" buttonType="RAISED" contentDisplay="TOP" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Tratamineto" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnTre" accessibleText="TREATMENT" buttonType="RAISED" contentDisplay="TOP" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Tratamiento" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="83.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView accessibleText="TREATMENT" fitHeight="83.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/beauty.png" />
                             </image>

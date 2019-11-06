@@ -72,7 +72,15 @@ public class MainWindow extends Application {
                             break;
                         case "EMPLOYEE":
                             break;
-                        case "TREATMENT":
+                        case "TREATMENT":{
+                            try {
+                                TreatmentWindow treat = new TreatmentWindow();
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/treatment_window.fxml"));
+                                borderPanee.setCenter(root);
+                            } catch (IOException ex) {
+                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
                             break;
                         case "SALON":{
                             try {
