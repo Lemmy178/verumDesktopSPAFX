@@ -13,9 +13,9 @@ package com.verum.spa.gui;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
-import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.verum.spa.consume.controller.ProductController;
+import com.verum.spa.model.Product;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
@@ -24,21 +24,29 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeTableColumn;
+import javafx.scene.control.TreeTableView;
 
 public class ProductWindowAdd implements Initializable {
 
     @FXML
-    private JFXTreeTableView<?> tableProduct;
-    @FXML
     private JFXTextField txtProdName;
+
     @FXML
     private JFXTextField txtProdPrice;
+
     @FXML
     private ComboBox<?> cmbProdBrand;
+
     @FXML
     private JFXButton btnAddProduct;
+
     @FXML
     private JFXButton btnCancel;
+
+    @FXML
+    private TreeTableView<Product> table;
 
     ProductController proCtrl;
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -48,6 +56,7 @@ public class ProductWindowAdd implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         addingListeners();
         validations();
+        addTable();
         proCtrl = new ProductController();
     }
 
@@ -106,6 +115,32 @@ public class ProductWindowAdd implements Initializable {
                 }
             }
         });
+    }
+
+    public void addTable() {
+        
+        
+        Product pro = new Product();
+        pro.setProdId(1);
+        pro.setProdName("Nombre");
+        pro.setBrand("brand");
+        pro.setUseCost(10.5);
+        pro.setProdStatus(1);
+        
+        TreeTableColumn<Product, Integer> idPro = new TreeTableColumn<>("ID");
+        TreeTableColumn<Product, String> nombre = new TreeTableColumn<>("Nombre");
+        TreeTableColumn<Product, String> marca = new TreeTableColumn<>("Marca");
+        TreeTableColumn<Product, Double> precio = new TreeTableColumn<>("Precio");
+        TreeTableColumn<Product, Integer> estatus = new TreeTableColumn<>("Estatus");
+        table.getColumns().addAll(idPro, nombre, marca, precio, estatus);
+        
+        
+        TreeItem<Product> itm1 = new TreeItem<>(pro);
+        TreeItem<Product> itm11 = new TreeItem<>(pro);
+        TreeItem<Product> itm12 = new TreeItem<>(pro);
+//        itm1.getChildren().addAll(itm11,itm12);
+        table.setRoot(itm1);
+
     }
 
 }
