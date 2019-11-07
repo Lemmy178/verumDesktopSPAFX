@@ -44,10 +44,11 @@ public class ProductController {
         pro.setProdId(proID);
         return proREST.logicalDeleteProduct(pro);
     }
-//
-//    public Product productList() {
+
+    public static Product productList() {
 //        JsonObject jsonResposne = new JsonObject(proREST.listProduct());
-//
-//    }
+        proREST.listProduct();
+        return null;
+    }
 
 }
