@@ -17,9 +17,15 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.verum.spa.consume.controller.ProductController;
+import com.verum.spa.consumeREST.ProductConsumeREST;
 import com.verum.spa.model.Product;
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -74,7 +80,7 @@ public class ProductWindowModify implements Initializable {
     private TableColumn<Product, Integer> columnProductStatus;
 
     private RequiredFieldValidator validator = new RequiredFieldValidator();
-    private ProductController proCtrl;
+    private ProductController proCtrl = new ProductController();
     private Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
     private ObservableList<Product> masterData = FXCollections.observableArrayList();
@@ -160,10 +166,24 @@ public class ProductWindowModify implements Initializable {
 
     /* <------------------------ADDING VALUES---------------------------------------------------------------------->*/
     public void addValues() {
-        masterData.add(new Product(1, "Nombre", "Marxa", 1, 1.5));
-        masterData.add(new Product(2, "Mombre", "Xarxa", 0, 10.5));
-        masterData.add(new Product(3, "Zombre", "Zarxa", 0, 11.5));
-        filteredData.addAll(masterData);
+        Platform.runLater(() -> {
+            try {
+                ArrayList<Product> productData = proCtrl.productList();
+                if (productData != null) {
+                    for (Product product : productData) {
+                        masterData.add(product);
+                    }
+                    filteredData.addAll(masterData);
+                } else {
+                    alert.setHeaderText("Error:");
+                    alert.setContentText("No se logro recopilar la informacion de los productos");
+                    alert.showAndWait();
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(ProductWindowModify.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
+
     }
 
     /* <------------------------ADDING CELL VALUES---------------------------------------------------------------------->*/

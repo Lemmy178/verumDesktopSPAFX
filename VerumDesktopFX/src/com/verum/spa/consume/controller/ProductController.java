@@ -11,6 +11,8 @@ package com.verum.spa.consume.controller;
 
 import com.verum.spa.consumeREST.ProductConsumeREST;
 import com.verum.spa.model.Product;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class ProductController {
 
@@ -45,10 +47,10 @@ public class ProductController {
         return proREST.logicalDeleteProduct(pro);
     }
 
-    public static Product productList() {
-//        JsonObject jsonResposne = new JsonObject(proREST.listProduct());
-        proREST.listProduct();
-        return null;
+    public ArrayList<Product> productList() throws IOException {
+        ArrayList<Product> datosProduct = new ArrayList<>();
+        datosProduct=proREST.listProductA();
+        return datosProduct;
     }
 
 }

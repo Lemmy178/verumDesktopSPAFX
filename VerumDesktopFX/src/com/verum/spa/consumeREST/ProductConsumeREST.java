@@ -12,10 +12,6 @@ package com.verum.spa.consumeREST;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import com.verum.spa.model.Product;
 import java.io.BufferedReader;
@@ -25,7 +21,7 @@ import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Collection;
+import java.util.ArrayList;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
@@ -39,7 +35,6 @@ public class ProductConsumeREST {
     static String values = "";
     static GsonBuilder builder = new GsonBuilder();
     static Gson gson = builder.create();
-//    Product pro = new Product();
 
     //ADD
     public String addProduct(Product pro) {
@@ -63,28 +58,7 @@ public class ProductConsumeREST {
         return values;
     }
 
-    public Product listProduct() {
-        target = client.
-                target("http://localhost:8080/VerumRESTSpa/api/product/productList");
-        values = target.request().get(String.class);
-
-        Gson jj = new Gson();
-        Type collectionType = new TypeToken<Collection<Product>>() {
-        }.getType();
-        Collection<Product> enums = jj.fromJson(values, collectionType);
-        enums.toString();
-
-        return null;
-    }
-
-    public  JsonArray listPro() throws MalformedURLException, IOException {
-        JsonParser parser = new JsonParser();
-        JsonElement tradeElement = null;
-        JsonObject json = null;
-        JsonArray jsonAr = null;
-
-        Gson g = new Gson();
-
+    public ArrayList listProductA() throws MalformedURLException, IOException {
         String ruta = "http://localhost:8080/VerumRESTSpa/api/product/productList";
         URL url = new URL(ruta);
         HttpURLConnection connHttp = (HttpURLConnection) url.openConnection();
@@ -108,28 +82,12 @@ public class ProductConsumeREST {
             br.close();
             connHttp.disconnect();
 
-            Type collectionType = new TypeToken<Collection<Product>>() {
+            Type collectionType = new TypeToken<ArrayList<Product>>() {
             }.getType();
-            Collection<Product> enums = gson.fromJson(contenidoRespuesta, collectionType);
-            enums.toString();
-
-            System.out.println(enums);
-            return null;
+            ArrayList<Product> productCollection = gson.fromJson(contenidoRespuesta, collectionType);
+            return productCollection;
         }
         return null;
     }
 
-    public void consultarPrecio() throws IOException {
-        /* double precio = 0;
-//        JsonObject json = listPro();
-        JsonObject jsonRates = null;
-
-        if (json != null) {
-            jsonRates = json.getAsJsonObject("0").getAsJsonObject();
-            precio = jsonRates.get("useCost").getAsDouble();
-        }
-        System.out.println(precio);
-//        return precio;*/
-
-    }
 }

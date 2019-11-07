@@ -18,6 +18,7 @@ import com.verum.spa.consume.controller.ProductController;
 import com.verum.spa.model.Product;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -62,25 +63,27 @@ public class ProductWindowAdd implements Initializable {
 
     public void addingListeners() {
         alert.setTitle("Mensaje");
-        //Button actions
-        btnAddProduct.setOnAction((event) -> {
-            String prodName = txtProdName.getText().trim();
-//            String prodBrand = cmbProdBrand.getValue().toString();
-            String prodPrice = txtProdPrice.getText().trim();
 
-            if (prodName == null || /*prodBrand == null ||*/ prodPrice == null) {
-                alert.setHeaderText("Resultado de operacion:");
-                alert.setContentText("Todos los campos deben estar llenos");
-                alert.showAndWait();
-            } else {
-                String resutl = proCtrl.addProductController(prodName, "AquiVaElCombo",
-                        Double.parseDouble(prodPrice));
-                alert.setHeaderText("Resultado de operacion:");
-                alert.setContentText(resutl);
-                alert.showAndWait();
-                txtProdName.setText("");
-                txtProdPrice.setText("");
-            }
+        btnAddProduct.setOnAction((event) -> {
+            Platform.runLater(() -> {
+                String prodName = txtProdName.getText().trim();
+//            String prodBrand = cmbProdBrand.getValue().toString();
+                String prodPrice = txtProdPrice.getText().trim();
+
+                if (prodName == null || /*prodBrand == null ||*/ prodPrice == null) {
+                    alert.setHeaderText("Resultado de operacion:");
+                    alert.setContentText("Todos los campos deben estar llenos");
+                    alert.showAndWait();
+                } else {
+                    String resutl = proCtrl.addProductController(prodName, "AquiVaElCombo",
+                            Double.parseDouble(prodPrice));
+                    alert.setHeaderText("Resultado de operacion:");
+                    alert.setContentText(resutl);
+                    alert.showAndWait();
+                    txtProdName.setText("");
+                    txtProdPrice.setText("");
+                }
+            });
 
         });
 
@@ -118,23 +121,21 @@ public class ProductWindowAdd implements Initializable {
     }
 
     public void addTable() {
-        
-        
+
         Product pro = new Product();
         pro.setProdId(1);
         pro.setProdName("Nombre");
         pro.setBrand("brand");
         pro.setUseCost(10.5);
         pro.setProdStatus(1);
-        
+
         TreeTableColumn<Product, Integer> idPro = new TreeTableColumn<>("ID");
         TreeTableColumn<Product, String> nombre = new TreeTableColumn<>("Nombre");
         TreeTableColumn<Product, String> marca = new TreeTableColumn<>("Marca");
         TreeTableColumn<Product, Double> precio = new TreeTableColumn<>("Precio");
         TreeTableColumn<Product, Integer> estatus = new TreeTableColumn<>("Estatus");
         table.getColumns().addAll(idPro, nombre, marca, precio, estatus);
-        
-        
+
         TreeItem<Product> itm1 = new TreeItem<>(pro);
         TreeItem<Product> itm11 = new TreeItem<>(pro);
         TreeItem<Product> itm12 = new TreeItem<>(pro);
