@@ -107,9 +107,9 @@
               <columns>
                 <TableColumn fx:id="columnProductID" prefWidth="66.0" text="ID" />
                 <TableColumn fx:id="columnProductName" prefWidth="243.0" text="Nombre" />
-                  <TableColumn fx:id="columnProductBrand" prefWidth="122.0" text="Marca" />
-                  <TableColumn fx:id="columnProductPrice" prefWidth="125.0" text="Precio" />
-                  <TableColumn fx:id="columnProductStatus" prefWidth="107.0" text="Estatus" />
+                  <TableColumn fx:id="columnProductBrand" prefWidth="172.0" text="Marca" />
+                  <TableColumn fx:id="columnProductPrice" prefWidth="114.0" text="Precio" />
+                  <TableColumn fx:id="columnProductStatus" prefWidth="68.0" text="Estatus" />
               </columns>
             </TableView>
             <ImageView fitHeight="480.0" fitWidth="600.0" layoutY="320.0" opacity="0.04" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">

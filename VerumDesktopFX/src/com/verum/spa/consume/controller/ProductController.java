@@ -1,3 +1,4 @@
+
 /*=============================================================================
  |       Author:  Erick Ruben Ramos Vazquez
  |       Course:  Spa
@@ -10,12 +11,16 @@
 package com.verum.spa.consume.controller;
 
 import com.verum.spa.consumeREST.ProductConsumeREST;
+import com.verum.spa.consumeREST.RoomConsumeREST;
 import com.verum.spa.model.Product;
+import com.verum.spa.model.Room;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class ProductController {
 
+    private RoomConsumeREST rest = new RoomConsumeREST();
+    private Room rom = new Room();
     private static Product pro = new Product();
     private static ProductConsumeREST proREST = new ProductConsumeREST();
 
@@ -48,8 +53,16 @@ public class ProductController {
     }
 
     public ArrayList<Product> productList() throws IOException {
+        rom.setBranchId(1);
+        rom.setPhoto("fotoo");
+        rom.setRoomDesc("deesc");
+        rom.setRoomName("ElRichaaaaaaar");
+        rom.setRoomStatus(1);
+//        rom.setRoomId(11);
+        System.out.println(rest.addRoom(rom));
+
         ArrayList<Product> datosProduct = new ArrayList<>();
-        datosProduct=proREST.listProductA();
+        datosProduct = proREST.listProductA();
         return datosProduct;
     }
 

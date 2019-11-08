@@ -17,7 +17,6 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.verum.spa.consume.controller.ProductController;
-import com.verum.spa.consumeREST.ProductConsumeREST;
 import com.verum.spa.model.Product;
 import java.io.IOException;
 import java.net.URL;

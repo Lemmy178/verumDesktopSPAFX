@@ -24,6 +24,8 @@ public class Room {
         this.roomStatus = roomStatus;
         this.branchId = branchId;
     }
+    
+    public Room(){}
 
     public int getRoomId() {
         return roomId;

@@ -11,100 +11,100 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPanee" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="1556.0" stylesheets="@../css/GeneralStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="borderPanee" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/GeneralStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
     <left>
-        <VBox fx:id="vBoxSide" prefHeight="712.0" prefWidth="158.0" BorderPane.alignment="CENTER">
+        <VBox fx:id="vBoxSide" prefHeight="158.0" BorderPane.alignment="CENTER">
             <children>
-                <JFXButton id="accessBtn" fx:id="btnCli" accessibleText="CLIENT" buttonType="RAISED" contentDisplay="TOP" prefHeight="150.0" prefWidth="158.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Cliente" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnCli" accessibleText="CLIENT" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="158.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Cliente" textFill="WHITE">
                     <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="83.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/avartar.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnEmp" accessibleText="EMPLOYEE" buttonType="RAISED" contentDisplay="TOP" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Empleado" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnEmp" accessibleText="EMPLOYEE" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Empleado" textFill="WHITE">
                     <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="83.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/employee.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnSer" accessibleText="SERVICE" buttonType="RAISED" contentDisplay="TOP" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Servicio" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnSer" accessibleText="SERVICE" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Servicio" textFill="WHITE">
                     <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="83.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="83.0" fitWidth="37.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/product.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnTre" accessibleText="TREATMENT" buttonType="RAISED" contentDisplay="TOP" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Tratamiento" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnTre" accessibleText="TREATMENT" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Tratamiento" textFill="WHITE">
                     <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                     <graphic>
-                        <ImageView accessibleText="TREATMENT" fitHeight="83.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView accessibleText="TREATMENT" fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/beauty.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnRes" accessibleText="RESERVATION" buttonType="RAISED" contentDisplay="TOP" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Reservacion" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnRes" accessibleText="RESERVATION" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Reservacion" textFill="WHITE">
                     <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="83.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/calendar.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnSal" accessibleText="SALON" buttonType="RAISED" contentDisplay="TOP" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sala" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnSal" accessibleText="SALON" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sala" textFill="WHITE">
                     <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                     <graphic>
-                        <ImageView fx:id="btnSale" fitHeight="83.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="btnSale" fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/room.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnSto" accessibleText="STORE" buttonType="RAISED" contentDisplay="TOP" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sucursal" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnSto" accessibleText="STORE" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sucursal" textFill="WHITE">
                     <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                     <graphic>
-                        <ImageView fx:id="btnSal1" fitHeight="83.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="btnSal1" fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/shop.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnPro" accessibleText="PRODUCT" buttonType="RAISED" contentDisplay="TOP" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Producto" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnPro" accessibleText="PRODUCT" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="158.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Producto" textFill="WHITE">
                     <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                     <graphic>
-                        <ImageView fx:id="btnSale1" fitHeight="83.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="btnSale1" fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/productNew.png" />
                             </image>
