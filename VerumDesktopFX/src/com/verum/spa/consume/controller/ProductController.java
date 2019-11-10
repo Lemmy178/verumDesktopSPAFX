@@ -53,14 +53,6 @@ public class ProductController {
     }
 
     public ArrayList<Product> productList() throws IOException {
-        rom.setBranchId(1);
-        rom.setPhoto("fotoo");
-        rom.setRoomDesc("deesc");
-        rom.setRoomName("ElRichaaaaaaar");
-        rom.setRoomStatus(1);
-//        rom.setRoomId(11);
-        System.out.println(rest.addRoom(rom));
-
         ArrayList<Product> datosProduct = new ArrayList<>();
         datosProduct = proREST.listProductA();
         return datosProduct;

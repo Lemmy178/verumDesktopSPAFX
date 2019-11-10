@@ -29,7 +29,7 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.TreeTableView;
 
-public class ProductWindowAdd implements Initializable {
+public class ProductWindowDetails implements Initializable {
 
     @FXML
     private JFXTextField txtProdName;
@@ -55,10 +55,10 @@ public class ProductWindowAdd implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        addingListeners();
-        validations();
-        addTable();
-        proCtrl = new ProductController();
+//        addingListeners();
+//        validations();
+//        addTable();
+//        proCtrl = new ProductController();
     }
 
     public void addingListeners() {
