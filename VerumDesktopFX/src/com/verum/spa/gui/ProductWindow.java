@@ -25,7 +25,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class ProductWindow implements Initializable {
-
+           
     FXMLLoader fxml;
     Stage window;
     Scene scene;
