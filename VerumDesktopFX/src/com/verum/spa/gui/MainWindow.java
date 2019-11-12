@@ -89,9 +89,9 @@ public class MainWindow extends Application {
                         case "CLIENT": {
                             try {
                                 EmployeeWindowDetail employee = new EmployeeWindowDetail();
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_Window_Master.fxml"));
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_Window_Master_1.fxml"));
                                 borderPanee.setCenter(root);
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_Window_Detail.fxml"));
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_detail_1.fxml"));
                                 borderPanee.setRight(root);
 //                              borderPanee.getRight().setVisible(false);
                             } catch (IOException ex) {
@@ -102,9 +102,9 @@ public class MainWindow extends Application {
                         case "EMPLOYEE": {
                             try {
                                 EmployeeWindowDetail employee = new EmployeeWindowDetail();
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_Window_Master.fxml"));
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_Window_Master_1_1.fxml"));
                                 borderPanee.setCenter(root);
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_Window_Detail.fxml"));
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_detail_1_1.fxml"));
                                 borderPanee.setRight(root);
 //                              borderPanee.getRight().setVisible(false);
                             } catch (IOException ex) {

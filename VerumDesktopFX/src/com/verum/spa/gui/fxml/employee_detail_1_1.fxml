@@ -14,16 +14,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-   <opaqueInsets>
-      <Insets />
-   </opaqueInsets>
+<VBox prefHeight="500.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="500.0" prefWidth="345.0">
+      <AnchorPane minWidth="293.0" prefHeight="9999.0" prefWidth="250.0">
          <children>
-            <ScrollPane hbarPolicy="NEVER" layoutX="16.0" prefHeight="410.0" prefWidth="345.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+            <ScrollPane hbarPolicy="NEVER" layoutX="16.0" prefHeight="408.0" prefWidth="250.0" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
                <content>
-                  <AnchorPane prefHeight="744.0" prefWidth="300.0">
+                  <AnchorPane prefHeight="744.0" prefWidth="174.0">
                      <children>
                         <HBox alignment="CENTER" layoutX="15.0" layoutY="10.0" prefHeight="36.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="25.0">
                            <children>
@@ -34,8 +31,8 @@
                               </Label>
                            </children>
                         </HBox>
-                        <Separator layoutX="10.0" layoutY="45.0" prefHeight="11.0" prefWidth="230.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" />
-                        <ImageView fx:id="imgVUser" fitHeight="150.0" fitWidth="204.0" layoutX="75.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0">
+                        <Separator layoutX="10.0" layoutY="45.0" prefHeight="11.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" />
+                        <ImageView fx:id="imgVUser" fitHeight="150.0" fitWidth="204.0" layoutX="75.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="65.0">
                            <image>
                               <Image url="@../../../../../resources/user.png" />
                            </image>
@@ -51,7 +48,7 @@
                            </children>
                         </HBox>
                         <JFXTextField fx:id="lblEmpName" focusColor="#009551" labelFloat="true" layoutX="15.0" layoutY="359.0" prefHeight="25.0" promptText="Nombre(s)" unFocusColor="#00a65a" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="25.0" />
-                        <Separator layoutX="10.0" layoutY="332.0" prefHeight="11.0" prefWidth="230.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" />
+                        <Separator layoutX="10.0" layoutY="332.0" prefHeight="11.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" />
                         <JFXTextField fx:id="lblEmpLastN1" focusColor="#009551" labelFloat="true" layoutX="15.0" layoutY="410.0" prefHeight="25.0" promptText="Apellido paterno" unFocusColor="#00a65a" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="25.0" />
                         <JFXTextField fx:id="lblEmpLastN2" focusColor="#009551" labelFloat="true" layoutX="15.0" layoutY="464.0" prefHeight="25.0" promptText="Apellido materno" unFocusColor="#00a65a" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="25.0" />
                         <JFXTextField fx:id="lblRFC" focusColor="#009551" labelFloat="true" layoutX="15.0" layoutY="516.0" prefHeight="25.0" promptText="RFC" unFocusColor="#00a65a" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="25.0" />
