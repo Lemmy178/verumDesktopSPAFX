@@ -84,10 +84,32 @@ public class MainWindow extends Application {
             if (node.getAccessibleText() != null) {
                 node.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
                     switch (node.getAccessibleText()) {
-                        case "CLIENT":
-                            break;
-                        case "EMPLOYEE":
-                            break;
+                        case "CLIENT": {
+                            try {
+                                EmployeeWindowDetail employee = new EmployeeWindowDetail();
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_Window_Master.fxml"));
+                                borderPanee.setCenter(root);
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_Window_Detail.fxml"));
+                                borderPanee.setRight(root);
+                                
+                            } catch (IOException ex) {
+                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                        break;
+                        case "EMPLOYEE": {
+                            try {
+                                EmployeeWindowDetail employee = new EmployeeWindowDetail();
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_Window_Master.fxml"));
+                                borderPanee.setCenter(root);
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_Window_Detail.fxml"));
+                                borderPanee.setRight(root);
+                                
+                            } catch (IOException ex) {
+                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                        break;
                         case "TREATMENT": {
                             try {
                                 TreatmentWindow treat = new TreatmentWindow();
