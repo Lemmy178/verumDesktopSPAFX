@@ -1,10 +1,12 @@
 /*=============================================================================
- |       Author:  Erick Ruben Ramos Vazquez
+ |       Author:  Edson M.
  |       Course:  Spa
- |     Due Date:  10/28/2019
- |  Description:  ProductWindow
+ |     Due Date:  11/6/2019
+ |  Description:  ProductWindowAdd
  |                
- | Deficiencies:  No por el momento
+ | Deficiencies:  No detected.
+
+                  
  *===========================================================================*/
 package com.verum.spa.gui;
 
@@ -24,24 +26,20 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class ProductWindow implements Initializable {
-           
+public class CustomerWindowModify implements Initializable {
+
     FXMLLoader fxml;
     Stage window;
     Scene scene;
 
     @FXML
-    private BorderPane proBorderPane;
-
+    private BorderPane empBorderPane;
     @FXML
-    private JFXButton btnProAdd;
-
+    private JFXButton btnEmpAdd;
     @FXML
-    private JFXButton btnProAdm;
-
+    private JFXButton btnEmpAdm;
     @FXML
-    private JFXButton btnProList;
-
+    private JFXButton btnEmpList;
     @FXML
     private VBox vBox;
 
@@ -51,9 +49,9 @@ public class ProductWindow implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         addListeners();
         try {
-            windowDefautl();
+            windowDefault();
         } catch (IOException ex) {
-            Logger.getLogger(ProductWindow.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerWindowModify.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -62,18 +60,18 @@ public class ProductWindow implements Initializable {
             if (node.getAccessibleText() != null) {
                 node.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
                     switch (node.getAccessibleText()) {
-                        case "admProduct":
+                        case "admEmployee":
                             try {
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Modify.fxml"));
-                                proBorderPane.setCenter(root);
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_Window_Modify.fxml"));
+                                empBorderPane.setCenter(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
                             }
                             break;
-                        case "detailsProduct":
+                        case "listEmployee":
                             try {
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Details.fxml"));
-                                proBorderPane.setCenter(root);
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_Window_List.fxml"));
+                                empBorderPane.setCenter(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
                             }
@@ -82,12 +80,11 @@ public class ProductWindow implements Initializable {
                 });
             }
         }
-
     }
 
-    public void windowDefautl() throws IOException {
+    public void windowDefault() throws IOException {
         root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Modify.fxml"));
-        proBorderPane.setCenter(root);
+        empBorderPane.setCenter(root);
     }
 
 }

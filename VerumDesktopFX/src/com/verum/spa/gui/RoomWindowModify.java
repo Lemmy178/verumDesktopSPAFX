@@ -24,7 +24,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class RoomWindowDetail implements Initializable {
+public class RoomWindowModify implements Initializable {
 
     FXMLLoader fxml;
     Stage window;

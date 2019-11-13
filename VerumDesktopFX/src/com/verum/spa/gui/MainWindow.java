@@ -89,7 +89,7 @@ public class MainWindow extends Application {
                     switch (node.getAccessibleText()) {
                         case "CLIENT": {
                             try {
-                                EmployeeWindowDetail employee = new EmployeeWindowDetail();
+                                EmployeeWindowModify employee = new EmployeeWindowModify();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_Window_Master_1.fxml"));
                                 borderPanee.setCenter(root);
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_detail_1.fxml"));
@@ -102,7 +102,7 @@ public class MainWindow extends Application {
                         break;
                         case "EMPLOYEE": {
                             try {
-                                EmployeeWindowDetail employee = new EmployeeWindowDetail();
+                                EmployeeWindowModify employee = new EmployeeWindowModify();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_Window_Master_1_1.fxml"));
                                 borderPanee.setCenter(root);
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_detail_1_1.fxml"));
@@ -119,8 +119,7 @@ public class MainWindow extends Application {
                             break;
                         case "TREATMENT": {
                             try {
-                                TreatmentWindowDetail treatmentDetail = new TreatmentWindowDetail();
-                                TreatmentWindowMaster treatmentMaster = new TreatmentWindowMaster();
+                                TreatmentWindowModify treatmentDetail = new TreatmentWindowModify();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/treatment_window_master.fxml"));
                                 borderPanee.setCenter(root);
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/treatment_window_detail.fxml"));
@@ -132,8 +131,7 @@ public class MainWindow extends Application {
                         break;
                         case "SALON": {
                             try {
-                                RoomWindowDetail roomDetail = new RoomWindowDetail();
-                                RoomWindowMaster roomMaster = new RoomWindowMaster();
+                                RoomWindowModify roomDetail = new RoomWindowModify();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/room_window_master.fxml"));
                                 borderPanee.setCenter(root);
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/room_window_detail.fxml"));

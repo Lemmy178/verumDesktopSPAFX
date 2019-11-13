@@ -23,7 +23,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class TreatmentWindowDetail implements Initializable {
+public class TreatmentWindowModify implements Initializable {
 
     FXMLLoader fxml;
     Stage window;
