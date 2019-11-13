@@ -65,7 +65,7 @@ public class MainWindow extends Application {
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
     public MainWindow() throws IOException {
-        fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/main_Window.fxml"));
+        fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/main_window.fxml"));
         fxml.setController(this);
     }
 
@@ -119,7 +119,7 @@ public class MainWindow extends Application {
                             break;
                         case "TREATMENT": {
                             try {
-                                TreatmentWindow treatment = new TreatmentWindow();
+                                TreatmentWindowMaster treatment = new TreatmentWindowMaster();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/treatment_window_master.fxml"));
                                 borderPanee.setCenter(root);
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/treatment_window_detail.fxml"));
@@ -164,7 +164,7 @@ public class MainWindow extends Application {
                         case "PRODUCT": {
                             try {
                                 //ProductWindow pro = new ProductWindow();
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Modify.fxml"));
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_window_modify.fxml"));
                                 borderPanee.setCenter(root);
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_detail2.fxml"));
                                 borderPanee.setRight(root);

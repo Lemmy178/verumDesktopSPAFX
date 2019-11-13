@@ -2,7 +2,7 @@
  |       Author:  Ricardo Iván Ramírez Bello
  |       Course:  Spa
  |     Due Date:  11/03/2019
- |  Description:  RoomWindowMaster
+ |  Description:  Treatment Window
  |                
  | Deficiencies:  No por el momento
  *===========================================================================*/
@@ -14,17 +14,18 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.Scene;import javafx.scene.control.TableColumn;
+import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class RoomWindowMaster implements Initializable {
+public class TreatmentWindowMaster implements Initializable {
 
     FXMLLoader fxml;
     Stage window;
     Scene scene;
     
-    @FXML TableView tblvRoomTable;
+    @FXML TableView tblvTreatTable;
     @FXML TableColumn tblcColumn1;
     @FXML TableColumn tblcColumn2;
     
@@ -34,5 +35,4 @@ public class RoomWindowMaster implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         
     }
-    
 }

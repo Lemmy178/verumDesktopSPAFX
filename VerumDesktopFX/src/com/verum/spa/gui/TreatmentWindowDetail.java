@@ -17,9 +17,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TreeTableView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -29,16 +29,14 @@ public class TreatmentWindowDetail implements Initializable {
     Stage window;
     Scene scene;
     
-    @FXML TreeTableView trtTreat;
+    @FXML TextField txtName;
+    @FXML TextField txtCost;
+    @FXML ComboBox cmbStatus;
+    @FXML TextArea txaDescription;
     
-    @FXML TextField txtTreatName;
-    @FXML TextArea txaTreatDesc;
-    @FXML TextField txtTreatStatus;
-    
-    @FXML Button btnAdd;
-    @FXML Button btnUpdate;
+    @FXML Button btnNew;
+    @FXML Button btnSave;
     @FXML Button btnDelete;
-    @FXML Button btnUpdateList;
     
     @FXML VBox vBox;
     
