@@ -3,22 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Edson/Desktop/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/ProductWindow.java</file>
-            <file>file:/C:/Users/Edson/Desktop/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/MainWindow.java</file>
-            <file>file:/C:/Users/Edson/Desktop/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/TreatmentWindow.java</file>
-            <file>file:/C:/Users/Edson/Desktop/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/EmployeeWindow.java</file>
-            <file>file:/C:/Users/Edson/Desktop/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/fxml/room_window.fxml</file>
-            <file>file:/C:/Users/Edson/Desktop/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/fxml/product_Window_Details.fxml</file>
-            <file>file:/C:/Users/Edson/Desktop/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/EmployeeWindowModify.java</file>
-            <file>file:/C:/Users/Edson/Desktop/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/fxml/product_Window.fxml</file>
-            <file>file:/C:/Users/Edson/Desktop/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/ProductWindowModify.java</file>
-            <file>file:/C:/Users/Edson/Desktop/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/RoomWindow.java</file>
-            <file>file:/C:/Users/Edson/Desktop/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/fxml/employee_Window_Modify.fxml</file>
-=======
-            <file>file:/C:/Users/moi_3/Documents/GitHub/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/BranchWindow.java</file>
-            <file>file:/C:/Users/moi_3/Documents/GitHub/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/consume/controller/BranchController.java</file>
->>>>>>> cf6713b7a7d5fb0885cb17a07ee938e82e788b0a
+            <file>file:/home/ruben/Desktop/Escritorio/verumDesktopSPAFX/VerumDesktopFX/src/com/verum/spa/gui/fxml/product_window.fxml</file>
         </group>
     </open-files>
 </project-private>
