@@ -119,7 +119,8 @@ public class MainWindow extends Application {
                             break;
                         case "TREATMENT": {
                             try {
-                                TreatmentWindowMaster treatment = new TreatmentWindowMaster();
+                                TreatmentWindowDetail treatmentDetail = new TreatmentWindowDetail();
+                                TreatmentWindowMaster treatmentMaster = new TreatmentWindowMaster();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/treatment_window_master.fxml"));
                                 borderPanee.setCenter(root);
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/treatment_window_detail.fxml"));
@@ -131,7 +132,8 @@ public class MainWindow extends Application {
                         break;
                         case "SALON": {
                             try {
-                                RoomWindowMaster room = new RoomWindowMaster();
+                                RoomWindowDetail roomDetail = new RoomWindowDetail();
+                                RoomWindowMaster roomMaster = new RoomWindowMaster();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/room_window_master.fxml"));
                                 borderPanee.setCenter(root);
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/room_window_detail.fxml"));
