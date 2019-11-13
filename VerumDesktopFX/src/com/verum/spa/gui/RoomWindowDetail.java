@@ -17,31 +17,28 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TreeTableView;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class RoomWindow implements Initializable {
+public class RoomWindowDetail implements Initializable {
 
     FXMLLoader fxml;
     Stage window;
     Scene scene;
     
-    @FXML TreeTableView trtRoom;
+    @FXML TextField txtName;
+    @FXML TextArea txaDescription;
+    @FXML ComboBox cmbStatus;
     
-    @FXML TextField txtRoomName;
-    @FXML TextArea txaRoomDesc;
-    @FXML TextField txtRoomStatus;
+    @FXML ImageView imgvPhoto;
     
-    @FXML ImageView imgvRoomPhoto;
-    
-    @FXML Button btnAdd;
-    @FXML Button btnUpdate;
+    @FXML Button btnNew;
+    @FXML Button btnSave;
     @FXML Button btnDelete;
-    @FXML Button btnUpdateList;
     
     @FXML VBox vBox;
     
@@ -57,11 +54,11 @@ public class RoomWindow implements Initializable {
             if (node.getAccessibleText() != null) {
                 node.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
                     switch (node.getAccessibleText()) {
-                        case "add":
+                        case "NEW":
                             break;
-                        case "update":
+                        case "SAVE":
                             break;
-                        case "delete":
+                        case "DELETE":
                             break;
                     }
                 });
