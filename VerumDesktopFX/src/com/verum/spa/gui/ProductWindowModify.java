@@ -12,44 +12,33 @@
 package com.verum.spa.gui;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.verum.spa.consume.controller.ProductController;
 import com.verum.spa.model.Product;
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeTableColumn;
-import javafx.scene.control.TreeTableView;
-import javafx.scene.control.cell.TreeItemPropertyValueFactory;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ProductWindowModify implements Initializable {
 
     @FXML
-    private TextField txtOldProdName;
-    @FXML
-    private JFXTreeTableView<?> tableProduct;
-    @FXML
-    private JFXTextField txtSearch;
-    @FXML
-    private TextField txtOldProdBrand;
-    @FXML
-    private TextField txtOldProdPrice;
-    @FXML
-    private JFXTextField txtprodName;
-    @FXML
-    private ComboBox<?> cmbProdBrand;
+    private JFXTextField txtProdName;
     @FXML
     private JFXTextField txtProdPrice;
     @FXML
@@ -57,26 +46,45 @@ public class ProductWindowModify implements Initializable {
     @FXML
     private JFXButton btnCancel;
     @FXML
-    private JFXCheckBox checkBoxProduct;
+    private JFXComboBox<?> cmbBrand;
     @FXML
     private JFXComboBox<?> cmbEstatus;
     @FXML
-    private TextField txtOldProdEstatus;
+    private TableView<Product> productTable;
+    @FXML
+    private TableColumn<Product, Integer> columnProductID;
+    @FXML
+    private TableColumn<Product, String> columnProductName;
+    @FXML
+    private TableColumn<Product, String> columnProductBrand;
+    @FXML
+    private TableColumn<Product, Double> columnProductPrice;
+    @FXML
+    private TableColumn<Product, Integer> columnProductStatus;
 
-    RequiredFieldValidator validator = new RequiredFieldValidator();
-    ProductController proCtrl;
-    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+    private RequiredFieldValidator validator = new RequiredFieldValidator();
+    private ProductController proCtrl = new ProductController();
+    private Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+    private ObservableList<Product> masterData = FXCollections.observableArrayList();
+    private ObservableList<Product> filteredData = FXCollections.observableArrayList();
+
+    public ProductWindowModify() {
+//        addValues();
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 //        creatingTables();
-//        tableProducts = null;
-        validations();
+//        validations();
+        addingListeners();
     }
 
+    /* <------------------------LISTENERS---------------------------------------------------------------------->*/
     public void addingListeners() {
+        //Accept Button 
         btnAccept.setOnAction((event) -> {
-            String prodName = txtprodName.getText().trim();
+            String prodName = txtProdName.getText().trim();
 //            String prodBrand = cmbProdBrand.getValue().toString();
             String prodPrice = txtProdPrice.getText().trim();
 
@@ -90,72 +98,81 @@ public class ProductWindowModify implements Initializable {
                 alert.setHeaderText("Resultado de operacion:");
                 alert.setContentText(resutl);
                 alert.showAndWait();
-                txtprodName.setText("");
+                txtProdName.setText("");
                 txtProdPrice.setText("");
             }
         });
 
+        //Cancel Button
         btnCancel.setOnAction((event) -> {
-            txtOldProdBrand.setText("");
-            txtOldProdName.setText("");
-            txtOldProdPrice.setText("");
             txtProdPrice.setText("");
-            txtSearch.setText("");
-            txtprodName.setText("");
+            txtProdName.setText("");
+        });
+
+//        Selected Item
+        productTable.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Product>() {
+            @Override
+            public void changed(ObservableValue<? extends Product> observable, Product oldValue, Product newValue) {
+                txtProdName.setText(newValue.getProdName());
+//                cmbBrand.setValue(newValue.getBrand());
+                txtProdPrice.setText(String.valueOf(newValue.getUseCost()));
+                if (newValue.getProdStatus() == 0) {
+//                    cmbEstatus.setText("Inactivo");
+                } else {
+//                    cmbEstatus.setText("Activo");
+                }
+
+            }
         });
     }
 
+    /* <------------------------VALIDATIONS---------------------------------------------------------------------->*/
+    //    public void validations() {
+    //        txtProdName.getValidators().add(validator);
+    //        validator.setMessage("Es necesario agregar un nombre de producto");
+    //        txtProdPrice.getValidators().add(validator);
+    //        validator.setMessage("Es necesario agregar un precio de producto");
+    //
+    //        txtProdName.focusedProperty().addListener(new ChangeListener<Boolean>() {
+    //            @Override
+    //            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+    //                if (!newValue) {
+    //                    txtProdName.validate();
+    //                }
+    //            }
+    //        });
+    //    }
+
+    /* <------------------------ADDING VALUES---------------------------------------------------------------------->*/
+    public void addValues() {
+        Platform.runLater(() -> {
+            try {
+                ArrayList<Product> productData = proCtrl.productList();
+                if (productData != null) {
+                    for (Product product : productData) {
+                        masterData.add(product);
+                    }
+                    filteredData.addAll(masterData);
+                } else {
+                    alert.setHeaderText("Error:");
+                    alert.setContentText("No se logro recopilar la informacion de los productos");
+                    alert.showAndWait();
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(ProductWindowModify.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
+
+    }
+
+    /* <------------------------ADDING CELL VALUES---------------------------------------------------------------------->*/
     public void creatingTables() {
-        Product producto = new Product(1, "Producto", "Brand", 8, 0);
-        Product product = new Product(2, "Producto", "Brand", 8, 0);
-
-//        tableProducts = new JFXTreeTableView<>();
-        TreeTableView<Product> treeTableView = new TreeTableView<Product>();
-        TreeTableColumn<Product, Integer> idProCol = new TreeTableColumn<Product, Integer>("ID");
-        TreeTableColumn<Product, String> prodName = new TreeTableColumn<Product, String>("Nombre de producto");
-        TreeTableColumn<Product, String> prodBrand = new TreeTableColumn<Product, String>("Marca");
-        TreeTableColumn<Product, Double> prodUsePrice = new TreeTableColumn<Product, Double>("Precio");
-        TreeTableColumn<Product, Integer> prodStatus = new TreeTableColumn<Product, Integer>("Estatus");
-
-        idProCol.setCellValueFactory(new TreeItemPropertyValueFactory<Product, Integer>("prodId"));
-        prodName.setCellValueFactory(new TreeItemPropertyValueFactory<Product, String>("prodName"));
-        prodBrand.setCellValueFactory(new TreeItemPropertyValueFactory<Product, String>("brand"));
-        prodUsePrice.setCellValueFactory(new TreeItemPropertyValueFactory<Product, Double>("useCost"));
-        prodStatus.setCellValueFactory(new TreeItemPropertyValueFactory<Product, Integer>("prodStatus"));
-        treeTableView.getColumns().addAll(idProCol, prodName, prodBrand, prodUsePrice, prodStatus);
-
-        TreeItem<Product> itemRoot = new TreeItem<Product>(producto);
-        itemRoot.getChildren().addAll(itemRoot);
-        treeTableView.setRoot(itemRoot);
-        StackPane root = new StackPane();
-        root.getChildren().add(treeTableView);
-
-    }
-
-    public void validations() {
-        //Validations
-        txtprodName.getValidators().add(validator);
-        validator.setMessage("Es necesario agregar un nombre de producto");
-        txtProdPrice.getValidators().add(validator);
-        validator.setMessage("Es necesario agregar un precio de producto");
-
-        txtprodName.focusedProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                if (!newValue) {
-                    txtprodName.validate();
-                }
-            }
-        });
-
-        txtProdPrice.focusedProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                if (!newValue) {
-                    txtProdPrice.validate();
-                }
-            }
-        });
+        columnProductID.setCellValueFactory(new PropertyValueFactory<Product, Integer>("ProdId"));
+        columnProductName.setCellValueFactory(new PropertyValueFactory<Product, String>("ProdName"));
+        columnProductBrand.setCellValueFactory(new PropertyValueFactory<Product, String>("Brand"));
+        columnProductStatus.setCellValueFactory(new PropertyValueFactory<Product, Integer>("ProdStatus"));
+        columnProductPrice.setCellValueFactory(new PropertyValueFactory<Product, Double>("UseCost"));
+        productTable.setItems(masterData);
     }
 
 }

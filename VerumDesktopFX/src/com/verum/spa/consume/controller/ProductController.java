@@ -1,3 +1,4 @@
+
 /*=============================================================================
  |       Author:  Erick Ruben Ramos Vazquez
  |       Course:  Spa
@@ -10,10 +11,16 @@
 package com.verum.spa.consume.controller;
 
 import com.verum.spa.consumeREST.ProductConsumeREST;
+import com.verum.spa.consumeREST.RoomConsumeREST;
 import com.verum.spa.model.Product;
+import com.verum.spa.model.Room;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class ProductController {
 
+    private RoomConsumeREST rest = new RoomConsumeREST();
+    private Room rom = new Room();
     private static Product pro = new Product();
     private static ProductConsumeREST proREST = new ProductConsumeREST();
 
@@ -44,10 +51,11 @@ public class ProductController {
         pro.setProdId(proID);
         return proREST.logicalDeleteProduct(pro);
     }
-//
-//    public Product productList() {
-//        JsonObject jsonResposne = new JsonObject(proREST.listProduct());
-//
-//    }
+
+    public ArrayList<Product> productList() throws IOException {
+        ArrayList<Product> datosProduct = new ArrayList<>();
+        datosProduct = proREST.listProductA();
+        return datosProduct;
+    }
 
 }

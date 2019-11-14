@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.verum.spa.gui.RoomWindow">
+<BorderPane prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.verum.spa.gui.TreatmentWindow">
    <right>
       <VBox fx:id="vBox" alignment="CENTER" prefWidth="203.0" BorderPane.alignment="CENTER">
          <children>
@@ -24,9 +24,9 @@
                   <Font name="System Bold" size="19.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="131.0" fitWidth="150.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="124.0" fitWidth="130.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../resources/room_add.png" />
+                        <Image url="@../../../../../resources/treatment_add.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -39,9 +39,9 @@
                   <Font name="System Bold" size="19.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="131.0" fitWidth="150.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="124.0" fitWidth="130.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../resources/heating_room.png" />
+                        <Image url="@../../../../../resources/beauty.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -54,9 +54,9 @@
                   <Font name="System Bold" size="19.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="131.0" fitWidth="150.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="124.0" fitWidth="130.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../resources/room_delete.png" />
+                        <Image url="@../../../../../resources/treatment_delete.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -78,22 +78,22 @@
                      <children>
                         <AnchorPane prefHeight="2000.0" prefWidth="410.0">
                            <children>
-                              <JFXTreeTableView fx:id="trtRoom" layoutX="14.0" layoutY="67.0" prefHeight="519.0" prefWidth="362.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="126.0" />
-                              <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="362.0" text="Lista de Salas" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                              <JFXTreeTableView fx:id="trtTreat" layoutX="14.0" layoutY="67.0" prefHeight="519.0" prefWidth="362.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="126.0" />
+                              <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="362.0" text="Lista de Tratamientos" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
                                  <font>
                                     <Font name="System Bold" size="30.0" />
                                  </font>
                               </Label>
-                              <JFXTextField fx:id="txtNameSearch" layoutX="75.0" layoutY="58.0" prefHeight="50.0" prefWidth="198.0" promptText="Buscar por nombre" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="58.0">
+                              <JFXTextField fx:id="txtNameSearch" labelFloat="true" layoutX="75.0" layoutY="67.0" prefHeight="50.0" prefWidth="200.0" promptText="Buscar por nombre" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="67.0">
                                  <font>
                                     <Font size="23.0" />
                                  </font></JFXTextField>
-                              <JFXCheckBox layoutX="281.0" layoutY="84.0" text="Listar Inactivos" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="84.0">
+                              <JFXCheckBox fx:id="chkListInactives" layoutX="289.0" layoutY="94.0" text="Listar Inactivos" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="94.0">
                                  <font>
                                     <Font size="11.0" />
                                  </font>
                               </JFXCheckBox>
-                              <JFXButton id="listButton" fx:id="btnUpdateList" buttonType="RAISED" contentDisplay="CENTER" layoutX="14.0" layoutY="58.0" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/Product.css" text=" " AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="58.0">
+                              <JFXButton id="listButton" fx:id="btnUpdateList" buttonType="RAISED" contentDisplay="CENTER" layoutX="14.0" layoutY="69.0" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/Product.css" text=" " AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="67.0">
                                  <graphic>
                                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -104,7 +104,7 @@
                               </JFXButton>
                               <ImageView fitHeight="350.0" fitWidth="350.0" opacity="0.04" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                                  <image>
-                                    <Image url="@../../../../../resources/heating_room.png" />
+                                    <Image url="@../../../../../resources/massage.png" />
                                  </image>
                               </ImageView>
                            </children></AnchorPane>
@@ -112,30 +112,46 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="1000.0">
                      <children>
-                        <AnchorPane prefHeight="1000.0" prefWidth="1000.0">
+                        <HBox alignment="CENTER" prefHeight="1000.0" prefWidth="200.0">
                            <children>
-                              <Label alignment="CENTER" layoutX="15.0" layoutY="58.0" prefHeight="77.0" prefWidth="380.0" style="-fx-border-style: none none solid none;" text="-10.00 °C" textFill="#1f16c6" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
-                                 <font>
-                                    <Font name="Monospaced Regular" size="65.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="25.0" layoutY="145.0" text="Temperatura actual de la sala" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="150.0" />
-                           </children></AnchorPane>
+                              <VBox prefHeight="1000.0" prefWidth="300.0" />
+                              <VBox alignment="CENTER" prefHeight="1000.0" prefWidth="500.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtTreatName" labelFloat="true" prefHeight="39.0" prefWidth="250.0" promptText="Name">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtTreatCost" prefHeight="39.0" prefWidth="250.0" promptText="Cost">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="60.0" />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtTreatStatus" labelFloat="true" prefHeight="39.0" prefWidth="250.0" promptText="Status">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="60.0" />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="1000.0" prefWidth="300.0" />
+                           </children>
+                        </HBox>
                         <AnchorPane prefHeight="1000.0" prefWidth="200.0">
                            <children>
-                              <JFXTextField fx:id="txtRoomName" labelFloat="true" layoutX="213.0" layoutY="18.0" prefHeight="31.0" prefWidth="212.0" promptText="Name" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="18.0">
+                              <JFXTextArea fx:id="txaTreatDesc" labelFloat="true" layoutX="123.0" layoutY="49.0" prefHeight="191.0" prefWidth="212.0" promptText="Description" style="-fx-border-color: #000000;" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="49.0">
                                  <font>
-                                    <Font size="18.0" />
-                                 </font></JFXTextField>
-                              <JFXTextArea fx:id="txaRoomDesc" labelFloat="true" layoutX="213.0" layoutY="82.0" prefHeight="138.0" prefWidth="212.0" promptText="Description" style="-fx-border-color: #000000;" AnchorPane.bottomAnchor="80.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="80.0">
-                                 <font>
-                                    <Font size="16.0" />
+                                    <Font size="20.0" />
                                  </font></JFXTextArea>
-                              <JFXTextField fx:id="txtRoomStatus" labelFloat="true" layoutX="213.0" layoutY="247.0" prefHeight="31.0" prefWidth="212.0" promptText="Status" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="19.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font></JFXTextField>
-                              <ImageView fx:id="imgvRoomPhoto" fitHeight="256.0" fitWidth="136.0" layoutX="1.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="252.0" AnchorPane.topAnchor="22.0" />
                            </children></AnchorPane>
                      </children>
                   </VBox>

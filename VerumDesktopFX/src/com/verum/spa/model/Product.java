@@ -8,33 +8,36 @@
  *===========================================================================*/
 package com.verum.spa.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Product {
 
+    @SerializedName("prodId")
+    @Expose
     private int prodId;
+    @SerializedName("prodName")
+    @Expose
     private String prodName;
+    @SerializedName("brand")
+    @Expose
     private String brand;
+    @SerializedName("useCost")
+    @Expose
+    private Double useCost;
+    @SerializedName("prodStatus")
+    @Expose
     private int prodStatus;
-    private double useCost;
 
     public Product() {
     }
 
-    public Product(int prodId, String prodName, String brand, int prodStatus, double useCost) {
+    public Product(int prodId, String prodName, String brand, Double useCost,int prodStatus) {
         this.prodId = prodId;
         this.prodName = prodName;
         this.brand = brand;
+        this.useCost = useCost;
         this.prodStatus = prodStatus;
-        this.useCost = useCost;
-    }
-
-    public Product(String prodName, String brand, double useCost) {
-        this.prodName = prodName;
-        this.brand = brand;
-        this.useCost = useCost;
-    }
-
-    public Product(String sales_Department, String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public int getProdId() {

@@ -62,14 +62,6 @@ public class ProductWindow implements Initializable {
             if (node.getAccessibleText() != null) {
                 node.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
                     switch (node.getAccessibleText()) {
-                        case "addProduct":
-                            try {
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Add.fxml"));
-                                proBorderPane.setCenter(root);
-                            } catch (IOException ex) {
-                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
-                            }
-                            break;
                         case "admProduct":
                             try {
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Modify.fxml"));
@@ -78,9 +70,9 @@ public class ProductWindow implements Initializable {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
                             }
                             break;
-                        case "listProduct":
+                        case "detailsProduct":
                             try {
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_List.fxml"));
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Details.fxml"));
                                 proBorderPane.setCenter(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);

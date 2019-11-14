@@ -10,6 +10,8 @@
 package com.verum.spa.gui;
 
 import com.jfoenix.controls.JFXButton;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,26 +29,40 @@ import javafx.stage.Stage;
 
 public class MainWindow extends Application {
 
-  
-    @FXML private BorderPane borderPanee;
-    @FXML private VBox vBoxSide;
-    @FXML private JFXButton btnCli;
-    @FXML private JFXButton btnEmp;
-    @FXML private JFXButton btnSer;
-    @FXML private JFXButton btnTre;
-    @FXML private JFXButton btnRes;
-    @FXML private JFXButton btnSal;
-    @FXML private ImageView btnSale;
-    @FXML private JFXButton btnSto;
-    @FXML private ImageView btnSal1;
-    @FXML private JFXButton btnPro;
-    @FXML private ImageView btnSale1;
-    @FXML private HBox hBoxTop;
+    @FXML
+    private BorderPane borderPanee;
+    @FXML
+    private VBox vBoxSide;
+    @FXML
+    private JFXButton btnCli;
+    @FXML
+    private JFXButton btnEmp;
+    @FXML
+    private JFXButton btnSer;
+    @FXML
+    private JFXButton btnTre;
+    @FXML
+    private JFXButton btnRes;
+    @FXML
+    private JFXButton btnSal;
+    @FXML
+    private ImageView btnSale;
+    @FXML
+    private JFXButton btnSto;
+    @FXML
+    private ImageView btnSal1;
+    @FXML
+    private JFXButton btnPro;
+    @FXML
+    private ImageView btnSale1;
+    @FXML
+    private HBox hBoxTop;
 
     FXMLLoader fxml;
     Stage window;
     Scene scene;
     Parent root = null;
+    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
     public MainWindow() throws IOException {
         fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/main_Window.fxml"));
@@ -75,9 +91,17 @@ public class MainWindow extends Application {
                             break;
                         case "EMPLOYEE":
                             break;
-                        case "TREATMENT":
-                            break;
-                        case "SALON":{
+                        case "TREATMENT": {
+                            try {
+                                TreatmentWindow treat = new TreatmentWindow();
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/treatment_window.fxml"));
+                                borderPanee.setCenter(root);
+                            } catch (IOException ex) {
+                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                        break;
+                        case "SALON": {
                             try {
                                 RoomWindow room = new RoomWindow();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/room_window.fxml"));
@@ -86,7 +110,7 @@ public class MainWindow extends Application {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
-                            break;
+                        break;
                         case "RESERVATION":
                             break;
                         case "STORE":
