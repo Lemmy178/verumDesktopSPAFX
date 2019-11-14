@@ -59,6 +59,9 @@ public class MainWindow extends Application {
         scene = new Scene(fxml.getRoot());
         window = primaryStage;
         window.setScene(scene);
+        window.setMinHeight(600);
+        window.setMinWidth(800);
+
         window.show();
         options();
     }

@@ -105,9 +105,36 @@ info-color-dark
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
 }
 
+<<<<<<< Updated upstream
 #glass-grey-wrong:hover{
     -fx-background-color: 
         #e30b0b,
         linear-gradient(#d6d6d6 50%, white 100%),
         radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
 }
+=======
+#addButton{
+    -fx-background-color: #00a65a;
+}
+#addButton:hover{
+    -fx-background-color: #009551;
+}
+
+#admButton{
+    -fx-background-color: #f39c12;
+}
+
+#admButton:hover{
+    -fx-background-color: #da8c10;
+}
+
+#listButton{
+    -fx-background-color: #605ca8;
+}
+#listButton:hover{
+    -fx-background-color: #565397;
+}
+#deleteButton{
+    -fx-background-color: #ff4444;    
+}
+>>>>>>> Stashed changes
