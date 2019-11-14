@@ -20,7 +20,7 @@
             </Label>
          </children>
       </HBox>
-      <TableView fixedCellSize="1.0" layoutX="14.0" layoutY="94.0" prefHeight="665.0" prefWidth="777.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="95.0">
+      <TableView fx:id="tblEmployee" fixedCellSize="1.0" layoutX="14.0" layoutY="94.0" prefHeight="665.0" prefWidth="777.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="95.0">
          <columns>
             <TableColumn prefWidth="46.0" text="No. Empleado" />
             <TableColumn prefWidth="83.0" text="Nombre(s)" />

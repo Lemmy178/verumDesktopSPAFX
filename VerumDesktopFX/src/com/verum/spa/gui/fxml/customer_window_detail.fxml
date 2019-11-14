@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox alignment="CENTER" prefHeight="610.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <opaqueInsets>
       <Insets />
@@ -89,25 +88,46 @@
                   </AnchorPane>
                </content>
             </ScrollPane>
-            <HBox alignment="CENTER" layoutX="19.0" layoutY="685.0" prefHeight="43.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+            <HBox alignment="CENTER" layoutX="19.0" layoutY="685.0" prefHeight="43.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <JFXButton id="btnSucces" fx:id="btnNewEmployee" buttonType="RAISED" prefHeight="117.0" prefWidth="110.0" ripplerFill="#05e860" stylesheets="@../css/GeneralStyles.css" text="Nuevo" textFill="WHITE">
+                  <JFXButton id="btnSucces" fx:id="btnNewEmployee" buttonType="RAISED" ripplerFill="#05e860" stylesheets="@../css/GeneralStyles.css" text="Nuevo" textFill="WHITE">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../resources/ico_add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </JFXButton>
-                  <JFXButton id="btnInfo" fx:id="btnSaveEmployee" buttonType="RAISED" layoutX="173.0" layoutY="19.0" prefHeight="118.0" prefWidth="110.0" ripplerFill="#ee5858" stylesheets="@../css/GeneralStyles.css" text="Guardar" textFill="WHITE">
+                  <JFXButton id="btnInfo" fx:id="btnSaveEmployee" buttonType="RAISED" layoutX="173.0" layoutY="19.0" ripplerFill="#ee5858" stylesheets="@../css/GeneralStyles.css" text="Guardar" textFill="WHITE">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../resources/ico_accept.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </JFXButton>
-                  <JFXButton id="btnDanger" fx:id="btnDeleteEmployee" buttonType="RAISED" layoutX="116.0" layoutY="10.0" prefHeight="118.0" prefWidth="110.0" ripplerFill="#ee5858" stylesheets="@../css/GeneralStyles.css" text="Eliminar" textFill="WHITE">
+                  <JFXButton id="btnDanger" fx:id="btnDeleteEmployee" buttonType="RAISED" layoutX="116.0" layoutY="10.0" ripplerFill="#ee5858" stylesheets="@../css/GeneralStyles.css" text="Eliminar" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../resources/ico_del.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </JFXButton>
                </children>
             </HBox>

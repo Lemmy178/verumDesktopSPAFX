@@ -1,3 +1,14 @@
 /VerumDesktopFX/build/
 /VerumDesktopFX/dist/
 /VerumDesktopFX/nbproject/private/private.xml
+VerumDesktopFX/src/com/verum/spa/gui/ProductWindowModify.java
+VerumDesktopFX/src/com/verum/spa/gui/ProductWindowDetail.java
+VerumDesktopFX/src/com/verum/spa/gui/CustomerWindowDetail.java
+VerumDesktopFX/src/com/verum/spa/gui/CustomerWindowMaster.java
+VerumDesktopFX/src/com/verum/spa/gui/EmployeeWindowDetail.java
+VerumDesktopFX/src/com/verum/spa/gui/EmployeeWindowMaster.java
+VerumDesktopFX/src/com/verum/spa/gui/ProductWindowModify.java
+VerumDesktopFX/src/com/verum/spa/gui/ProductWindowDetail.java
+VerumDesktopFX/src/com/verum/spa/gui/ProductWindowMaster.java
+VerumDesktopFX/src/com/verum/spa/gui/RoomWindowModify.java
+VerumDesktopFX/src/com/verum/spa/gui/TreatmentWindowModify.java

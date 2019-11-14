@@ -15,120 +15,132 @@
     <left>
         <VBox fx:id="vBoxSide" prefHeight="150.0" BorderPane.alignment="CENTER">
             <children>
-                <JFXButton id="accessBtn" fx:id="btnCli" accessibleText="CUSTOMER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Cliente" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnCli" accessibleText="CUSTOMER" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Cliente" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/avartar.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnEmp" accessibleText="EMPLOYEE" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Empleado" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnEmp" accessibleText="EMPLOYEE" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Empleado" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/employee.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnSer" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Servicio" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnSer" accessibleText="SERVICE" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Servicio" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="83.0" fitWidth="37.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/product.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnTre" accessibleText="TREATMENT" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Tratamiento" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnTre" accessibleText="TREATMENT" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Tratamiento" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                     </font>
                     <graphic>
-                        <ImageView accessibleText="TREATMENT" fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView accessibleText="TREATMENT" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/beauty.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnRes" accessibleText="ROOM" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Reservacion" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnRes" accessibleText="RESERVATION" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Reservacion" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/calendar.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnSal" accessibleText="SALON" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sala" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnSal" accessibleText="ROOM" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sala" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                     </font>
                     <graphic>
-                        <ImageView fx:id="btnSale" fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="btnSale" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/room.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnSto" accessibleText="BRANCH" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sucursal" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnSto" accessibleText="BRANCH" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sucursal" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                     </font>
                     <graphic>
-                        <ImageView fx:id="btnSal1" fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="btnSal1" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../resources/shop.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnPro" accessibleText="PRODUCT" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Producto" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnPro" accessibleText="PRODUCT" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Producto" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="14.0" />
                     </font>
                     <graphic>
-                        <ImageView fx:id="btnSale1" fitHeight="83.0" fitWidth="37.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="btnSale1" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../../../../resources/productNew.png" />
+                                <Image url="@../../../../../resources/soap.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
+            <JFXButton id="accessBtn" fx:id="btnPro1" accessibleText="ROOM_CONTROL" buttonType="RAISED" layoutX="10.0" layoutY="447.0" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Control salas" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="btnSale11" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/control_ico.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
             </children>
         </VBox>
     </left>
     <top>
-        <HBox id="nav" fx:id="hBoxTop" prefHeight="100.0" prefWidth="200.0" stylesheets="@../css/GeneralStyles.css" BorderPane.alignment="CENTER">
+        <HBox id="nav" fx:id="hBoxTop" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" stylesheets="@../css/GeneralStyles.css" BorderPane.alignment="CENTER">
             <children>
             <ImageView fitHeight="100.0" fitWidth="185.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../resources/LogoMyspa.png" />
                </image>
             </ImageView>
-                <ImageView fitHeight="59.0" fitWidth="157.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="59.0" fitWidth="157.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
                     <image>
                         <Image url="@../../../../../resources/avartar.png" />
                     </image>
                 </ImageView>
-                <Button mnemonicParsing="false" text="Button" />
-                <Label contentDisplay="BOTTOM" text="Usuario que inicio sesion">
+                <Button mnemonicParsing="false" text="Button" visible="false" />
+                <Label contentDisplay="BOTTOM" text="Usuario que inicio sesion" visible="false">
                     <HBox.margin>
                         <Insets top="43.0" />
                     </HBox.margin>
