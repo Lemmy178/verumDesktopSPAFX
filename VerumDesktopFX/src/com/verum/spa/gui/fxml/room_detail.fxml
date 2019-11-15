@@ -4,7 +4,6 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -20,25 +19,16 @@
                         <Insets right="5.0" />
                      </HBox.margin>
                   </JFXButton>
-                  <JFXButton id="deleteButton" fx:id="btnDeleteBranch" buttonType="RAISED" contentDisplay="CENTER" prefHeight="50.0" prefWidth="125.0" style="-fx-background-radius: 0;" stylesheets="@../css/GeneralStyles.css" text="Eliminar sucursal" textFill="WHITE" />
+                  <JFXButton id="deleteButton" fx:id="btnDeleteBranch" buttonType="RAISED" contentDisplay="CENTER" prefHeight="50.0" prefWidth="125.0" stylesheets="@../css/GeneralStyles.css" text="Eliminar sucursal" textFill="WHITE" />
                </children>
             </HBox>
-            <JFXTextField fx:id="txtName" disable="true" focusColor="#009551" layoutX="26.0" layoutY="257.0" prefHeight="25.0" prefWidth="179.0" promptText="Nombre" unFocusColor="#00a65a" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="24.0" />
-            <JFXTextField fx:id="txtAddress" disable="true" focusColor="#009551" labelFloat="true" layoutX="26.0" layoutY="83.0" prefHeight="25.0" prefWidth="179.0" promptText="Dirección" unFocusColor="#00a65a" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="24.0" />
-            <JFXTextField fx:id="txtLatitude" disable="true" focusColor="#009551" layoutX="26.0" layoutY="120.0" prefHeight="25.0" prefWidth="179.0" promptText="Latitud" unFocusColor="#00a65a" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="24.0" />
-            <JFXTextField fx:id="txtLongitude" disable="true" focusColor="#009551" layoutX="26.0" layoutY="159.0" prefHeight="25.0" prefWidth="179.0" promptText="Longitud" unFocusColor="#00a65a" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="24.0" />
-            <JFXComboBox fx:id="cmbStatus" disable="true" editable="true" focusColor="#009551" layoutX="26.0" layoutY="292.0" prefHeight="25.0" prefWidth="205.0" promptText="Estatus" unFocusColor="#00a65a" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="24.0" />
-            <Hyperlink layoutX="24.0" layoutY="197.0" text="Mostrar en el mapa" />
+            <JFXTextField fx:id="txtName" disable="true" focusColor="#009551" layoutX="26.0" layoutY="83.0" prefHeight="25.0" prefWidth="179.0" promptText="Nombre" unFocusColor="#00a65a" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+            <JFXComboBox fx:id="cmbStatus" disable="true" editable="true" focusColor="#009551" layoutX="26.0" layoutY="118.0" prefHeight="25.0" prefWidth="205.0" promptText="Estatus" unFocusColor="#00a65a" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
             <HBox alignment="CENTER" layoutY="7.0" prefHeight="67.0" prefWidth="293.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <JFXButton id="btnSucces" fx:id="btnAddBranch" buttonType="RAISED" contentDisplay="CENTER" prefHeight="50.0" prefWidth="125.0" stylesheets="@../css/GeneralStyles.css" text="Nuevo" textFill="WHITE">
+                  <JFXButton id="btnSucces" fx:id="btnAddBranch" buttonType="RAISED" contentDisplay="CENTER" prefHeight="50.0" prefWidth="255.0" stylesheets="@../css/GeneralStyles.css" text="Nuevo" textFill="WHITE">
                      <HBox.margin>
                         <Insets right="5.0" />
-                     </HBox.margin>
-                  </JFXButton>
-                  <JFXButton id="btnWarning" fx:id="btnUpdateData" buttonType="RAISED" contentDisplay="CENTER" prefHeight="50.0" prefWidth="125.0" stylesheets="@../css/GeneralStyles.css" text="Actualizar datos" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets />
                      </HBox.margin>
                   </JFXButton>
                </children>
