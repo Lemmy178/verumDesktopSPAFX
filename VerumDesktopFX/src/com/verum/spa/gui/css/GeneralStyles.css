@@ -25,8 +25,10 @@ info-color
 info-color-dark
 #0099CC
 */
-#nav{
-    -fx-background-color: #D6CA79;
+#nav{    
+    
+    -fx-background-color:  linear-gradient(to left, #0092a1, #00b37e, #89cb4e);
+    
 }
 
 #btnAdm{

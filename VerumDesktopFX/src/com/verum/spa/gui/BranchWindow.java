@@ -6,11 +6,13 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import com.verum.spa.consume.controller.BranchController;
 import com.verum.spa.model.Branch;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
-import javafx.application.Application;
+import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
@@ -23,7 +25,7 @@ import javafx.stage.Stage;
  *
  * @author moi_3
  */
-public class BranchWindow extends Application{  
+public class BranchWindow implements Initializable{  
     
     @FXML TableView<Branch> tblList;    
     @FXML JFXTextField txtAddress;
@@ -45,25 +47,23 @@ public class BranchWindow extends Application{
     Scene scene;
     
     BranchController branchCtrl;
-    
-    public BranchWindow(){
-        fxmll = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/branch_window.fxml"));
-        fxmll.setController(this);        
-        branchCtrl = new BranchController();
-    }
+        
+//    public BranchWindow(){
+//        fxmll = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/branch_window.fxml"));
+//        fxmll.setController(this);        
+//        branchCtrl = new BranchController();
+//    }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {                
-        fxmll.load();
-        scene = new Scene(fxmll.getRoot());        
-        window = primaryStage;
-        fillComboBoxes();
-        fillTableView();
+    public void initialize(URL location, ResourceBundle resources) {
         addListeners();
-        window.setMinWidth(800);
-        window.setMinHeight(600);
-        window.setScene(scene);                                               
-        window.show();
+        fillComboBoxes();
+        fillTableView();        
+//        addListeners();
+//        window.setMinWidth(800);
+//        window.setMinHeight(600);
+//        window.setScene(scene);                                               
+//        window.show();
     }
     
     private void addListeners(){            
@@ -192,6 +192,6 @@ public class BranchWindow extends Application{
                         if(cmbStatus.getSelectionModel().getSelectedIndex()>0)
                             return true;               
         return false;
-    }
+    }    
     
 }
