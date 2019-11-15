@@ -107,7 +107,7 @@ info-color-dark
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
 }
 
-<<<<<<< Updated upstream
+/*<<<<<<< Updated upstream
 #glass-grey-wrong:hover{
     -fx-background-color: 
         #e30b0b,
@@ -139,4 +139,4 @@ info-color-dark
 #deleteButton{
     -fx-background-color: #ff4444;    
 }
->>>>>>> Stashed changes
+>>>>>>> Stashed changes*/
