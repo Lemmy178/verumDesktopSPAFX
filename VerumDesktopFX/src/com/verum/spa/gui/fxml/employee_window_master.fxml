@@ -3,13 +3,15 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="9999.0" prefWidth="9999.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox alignment="CENTER" layoutY="29.0" prefHeight="40.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox alignment="CENTER" layoutY="29.0" prefHeight="40.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
          <children>
             <Label prefHeight="36.0" prefWidth="265.0" text="Administrar Empleados">
                <font>
@@ -18,7 +20,7 @@
             </Label>
          </children>
       </HBox>
-      <TableView fixedCellSize="1.0" layoutX="14.0" layoutY="94.0" prefHeight="665.0" prefWidth="777.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="9.0">
+      <TableView fixedCellSize="1.0" layoutX="14.0" layoutY="94.0" prefHeight="665.0" prefWidth="777.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="95.0">
          <columns>
             <TableColumn prefWidth="46.0" text="No. Empleado" />
             <TableColumn prefWidth="83.0" text="Nombre(s)" />
@@ -30,5 +32,10 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <ImageView fitHeight="350.0" fitWidth="350.0" layoutX="10.0" layoutY="10.0" opacity="0.1" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0">
+         <image>
+            <Image url="@../../../../../resources/avartar.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

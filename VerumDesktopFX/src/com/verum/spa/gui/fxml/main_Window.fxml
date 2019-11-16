@@ -15,7 +15,7 @@
     <left>
         <VBox fx:id="vBoxSide" prefHeight="150.0" BorderPane.alignment="CENTER">
             <children>
-                <JFXButton id="accessBtn" fx:id="btnCli" accessibleText="CLIENT" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Cliente" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnCli" accessibleText="CUSTOMER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Cliente" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
@@ -63,7 +63,7 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnRes" accessibleText="RESERVATION" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Reservacion" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnRes" accessibleText="ROOM" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Reservacion" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
@@ -87,7 +87,7 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnSto" accessibleText="STORE" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sucursal" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnSto" accessibleText="BRANCH" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sucursal" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>

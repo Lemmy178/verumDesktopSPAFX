@@ -36,7 +36,7 @@ info-color-dark
 }
 
 #btnDanger{
-    -fx-background-color:#ff4444
+    -fx-background-color:#ff4444;
 }
 
 #btnDanger:hover{
@@ -136,7 +136,8 @@ info-color-dark
 #listButton:hover{
     -fx-background-color: #565397;
 }
+>>>>>>> Stashed changes*/
+
 #deleteButton{
     -fx-background-color: #ff4444;    
 }
->>>>>>> Stashed changes*/

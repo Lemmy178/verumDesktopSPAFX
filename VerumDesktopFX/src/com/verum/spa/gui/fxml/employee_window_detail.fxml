@@ -14,18 +14,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="790.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" prefHeight="610.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <opaqueInsets>
       <Insets />
    </opaqueInsets>
    <children>
-      <AnchorPane prefHeight="762.0" prefWidth="345.0">
+      <AnchorPane prefHeight="675.0" prefWidth="300.0">
          <children>
-            <ScrollPane hbarPolicy="NEVER" layoutX="16.0" prefHeight="643.0" prefWidth="345.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <ScrollPane hbarPolicy="NEVER" layoutX="16.0" prefHeight="445.0" prefWidth="300.0" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <content>
-                  <AnchorPane prefHeight="744.0" prefWidth="300.0">
+                  <AnchorPane prefHeight="421.0" prefWidth="300.0">
                      <children>
-                        <HBox alignment="CENTER" layoutX="15.0" layoutY="10.0" prefHeight="36.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="25.0">
+                        <HBox alignment="CENTER" layoutX="15.0" layoutY="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="25.0">
                            <children>
                               <Label alignment="CENTER" text="Datos de Empleado">
                                  <font>
@@ -62,18 +62,21 @@
                            <children>
                               <Label text="No. empleado">
                                  <font>
-                                    <Font size="25.0" />
+                                    <Font name="Monospaced Regular" size="25.0" />
                                  </font>
                               </Label>
                            </children>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
                   </AnchorPane>
                </content>
             </ScrollPane>
-            <HBox alignment="CENTER" layoutX="19.0" layoutY="685.0" prefHeight="43.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+            <HBox alignment="CENTER" layoutX="15.0" layoutY="524.0" prefHeight="43.0" prefWidth="270.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
                <children>
-                  <JFXButton id="btnSucces" fx:id="btnNewEmployee" buttonType="RAISED" prefHeight="117.0" prefWidth="110.0" ripplerFill="#05e860" stylesheets="@../css/GeneralStyles.css" text="Nuevo">
+                  <JFXButton id="btnSucces" fx:id="btnNewEmployee" buttonType="RAISED" prefHeight="117.0" prefWidth="110.0" ripplerFill="#05e860" stylesheets="@../css/GeneralStyles.css" text="Nuevo" textFill="WHITE">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -81,12 +84,12 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </JFXButton>
-                  <JFXButton id="btnAdm" fx:id="btnSaveEmployee" buttonType="RAISED" layoutX="173.0" layoutY="19.0" prefHeight="118.0" prefWidth="110.0" ripplerFill="#ee5858" stylesheets="@../css/GeneralStyles.css" text="Guardar">
+                  <JFXButton id="btnInfo" fx:id="btnSaveEmployee" buttonType="RAISED" layoutX="173.0" layoutY="19.0" prefHeight="118.0" prefWidth="110.0" ripplerFill="#ee5858" stylesheets="@../css/GeneralStyles.css" text="Guardar" textFill="WHITE">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </JFXButton>
-                  <JFXButton id="btnDanger" fx:id="btnSaveEmployee1" buttonType="RAISED" layoutX="116.0" layoutY="10.0" prefHeight="118.0" prefWidth="110.0" ripplerFill="#ee5858" stylesheets="@../css/GeneralStyles.css" text="Eliminar">
+                  <JFXButton id="btnDanger" fx:id="btnSaveEmployee1" buttonType="RAISED" layoutX="116.0" layoutY="10.0" prefHeight="118.0" prefWidth="110.0" ripplerFill="#ee5858" stylesheets="@../css/GeneralStyles.css" text="Eliminar" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
