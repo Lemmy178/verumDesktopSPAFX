@@ -51,7 +51,7 @@ public class ProductWindow implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         addListeners();
         try {
-            windowDefautl();
+            windowDefault();
         } catch (IOException ex) {
             Logger.getLogger(ProductWindow.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -85,7 +85,7 @@ public class ProductWindow implements Initializable {
 
     }
 
-    public void windowDefautl() throws IOException {
+    public void windowDefault() throws IOException {
         root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Modify.fxml"));
         proBorderPane.setCenter(root);
     }

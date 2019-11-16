@@ -2,7 +2,7 @@
  |       Author:  Ricardo Iván Ramírez Bello
  |       Course:  Spa
  |     Due Date:  11/03/2019
- |  Description:  RoomWindow
+ |  Description:  Treatment Window
  |                
  | Deficiencies:  No por el momento
  *===========================================================================*/
@@ -17,31 +17,26 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TreeTableView;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class RoomWindow implements Initializable {
+public class TreatmentWindowModify implements Initializable {
 
     FXMLLoader fxml;
     Stage window;
     Scene scene;
     
-    @FXML TreeTableView trtRoom;
+    @FXML TextField txtName;
+    @FXML TextField txtCost;
+    @FXML ComboBox cmbStatus;
+    @FXML TextArea txaDescription;
     
-    @FXML TextField txtRoomName;
-    @FXML TextArea txaRoomDesc;
-    @FXML TextField txtRoomStatus;
-    
-    @FXML ImageView imgvRoomPhoto;
-    
-    @FXML Button btnAdd;
-    @FXML Button btnUpdate;
+    @FXML Button btnNew;
+    @FXML Button btnSave;
     @FXML Button btnDelete;
-    @FXML Button btnUpdateList;
     
     @FXML VBox vBox;
     

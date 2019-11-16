@@ -39,7 +39,7 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnSer" accessibleText="SERVICE" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Servicio" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnSer" buttonType="RAISED" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Servicio" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>

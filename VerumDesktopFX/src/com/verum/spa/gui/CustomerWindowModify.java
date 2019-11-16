@@ -1,8 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/*=============================================================================
+ |       Author:  Edson M.
+ |       Course:  Spa
+ |     Due Date:  11/6/2019
+ |  Description:  ProductWindowAdd
+ |                
+ | Deficiencies:  No detected.
+
+                  
+ *===========================================================================*/
 package com.verum.spa.gui;
 
 import com.jfoenix.controls.JFXButton;
@@ -21,11 +26,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/**
- *
- * @author Edson
- */
-public class CustomerWindowDetail implements Initializable {
+public class CustomerWindowModify implements Initializable {
 
     FXMLLoader fxml;
     Stage window;
@@ -50,7 +51,7 @@ public class CustomerWindowDetail implements Initializable {
         try {
             windowDefault();
         } catch (IOException ex) {
-            Logger.getLogger(CustomerWindowDetail.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerWindowModify.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

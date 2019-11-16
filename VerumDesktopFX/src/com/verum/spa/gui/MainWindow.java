@@ -65,7 +65,7 @@ public class MainWindow extends Application {
 //    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
     public MainWindow() throws IOException {
-        fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/main_Window.fxml"));
+        fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/main_window.fxml"));
         fxml.setController(this);
     }
 
@@ -86,11 +86,22 @@ public class MainWindow extends Application {
             if (node.getAccessibleText() != null) {
                 node.addEventHandler(javafx.scene.input.MouseEvent.MOUSE_CLICKED, (e) -> {
                     switch (node.getAccessibleText()) {
+
                         case "CUSTOMER": {
                             try {                                
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_window_master.fxml"));
                                 borderPanee.setCenter(root);
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_window_detail.fxml"));
+                            } catch (IOException ex) {
+                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                        case "CLIENT": {
+                            try {
+//                                EmployeeWindowModify employee = new EmployeeWindowModify();
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_Window_Master_1.fxml"));
+                                borderPanee.setCenter(root);
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/customer_detail_1.fxml"));
                                 borderPanee.setRight(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
@@ -102,18 +113,32 @@ public class MainWindow extends Application {
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_window_master.fxml"));
                                 borderPanee.setCenter(root);
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_window_detail.fxml"));
+                                EmployeeWindowModify employee = new EmployeeWindowModify();
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_Window_Master_1_1.fxml"));
+                                borderPanee.setCenter(root);
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_detail_1_1.fxml"));
+
                                 borderPanee.setRight(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
                         break;
+                        case "SERVICE":
+                            borderPanee.getCenter().setVisible(false);
+                            borderPanee.getRight().setVisible(false);
+                            break;
                         case "TREATMENT": {
                             try {
+
 //                                TreatmentWindow treat = new TreatmentWindow();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/treatment_window.fxml"));
+
+                                TreatmentWindowModify treatmentDetail = new TreatmentWindowModify();
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/treatment_window_master.fxml"));
                                 borderPanee.setCenter(root);
-                                borderPanee.getRight().setVisible(false);
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/treatment_window_detail.fxml"));
+                                borderPanee.setRight(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
                             }
@@ -121,10 +146,13 @@ public class MainWindow extends Application {
                         break;
                         case "ROOM": {
                             try {
+
 //                                RoomWindow room = new RoomWindow();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/room_window.fxml"));
+                                RoomWindowModify roomDetail = new RoomWindowModify();
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/room_window_master.fxml"));
                                 borderPanee.setCenter(root);
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/room_detail.fxml"));
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/room_window_detail.fxml"));
                                 borderPanee.setRight(root);
 //                                borderPanee.getRight().setVisible(false);
                             } catch (IOException ex) {
@@ -133,6 +161,7 @@ public class MainWindow extends Application {
                         }
                         break;
                         case "RESERVATION":
+                            borderPanee.getCenter().setVisible(false);
                             borderPanee.getRight().setVisible(false);
                             break;
                         case "BRANCH": {
@@ -149,8 +178,12 @@ public class MainWindow extends Application {
                         break;
                         case "PRODUCT": {
                             try {
+
 //                                ProductWindow pro = new ProductWindow();
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_Window_Modify.fxml"));
+
+                                //ProductWindow pro = new ProductWindow();
+                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_window_modify.fxml"));
                                 borderPanee.setCenter(root);
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/product_detail2.fxml"));
                                 borderPanee.setRight(root);

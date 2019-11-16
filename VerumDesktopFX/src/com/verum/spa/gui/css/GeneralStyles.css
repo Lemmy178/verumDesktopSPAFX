@@ -107,14 +107,7 @@ info-color-dark
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
 }
 
-/*<<<<<<< Updated upstream
-#glass-grey-wrong:hover{
-    -fx-background-color: 
-        #e30b0b,
-        linear-gradient(#d6d6d6 50%, white 100%),
-        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
-}
-=======
+/*
 #addButton{
     -fx-background-color: #00a65a;
 }
