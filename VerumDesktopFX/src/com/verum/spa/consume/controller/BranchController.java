@@ -21,6 +21,7 @@ import java.util.ArrayList;
  * @author moi_3
  */
 public class BranchController {
+    
     private static Branch branch = new Branch();
     private static BranchConsumeREST braREST = new BranchConsumeREST();
 
@@ -65,4 +66,6 @@ public class BranchController {
         return branchList;
         
     }
+    
+    
 }

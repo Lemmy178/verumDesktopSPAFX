@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPanee" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/GeneralStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="pnlMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/GeneralStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
     <left>
         <VBox fx:id="vBoxSide" prefHeight="150.0" BorderPane.alignment="CENTER">
             <children>
@@ -145,19 +145,14 @@
                         <Insets top="43.0" />
                     </HBox.margin>
                 </Label>
-                <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="51.0" translateX="1145.0">
-                    <HBox.margin>
-                        <Insets top="28.0" />
-                    </HBox.margin>
-                    <graphic>
-                        <ImageView fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../../../../resources/logout.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
             </children>
         </HBox>
     </top>
+   <center>
+      <ImageView fitHeight="400.0" fitWidth="564.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../../../../resources/bg_principal.png" />
+         </image>
+      </ImageView>
+   </center>
 </BorderPane>

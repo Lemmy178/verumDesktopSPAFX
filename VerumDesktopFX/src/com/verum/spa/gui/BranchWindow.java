@@ -19,6 +19,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -41,29 +42,19 @@ public class BranchWindow implements Initializable{
     @FXML JFXButton btnDeleteBranch;        
     
     @FXML JFXButton btnSave;
-    
+           
     FXMLLoader fxmll;
     Stage window;
     Scene scene;
     
     BranchController branchCtrl;
-        
-//    public BranchWindow(){
-//        fxmll = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/branch_window.fxml"));
-//        fxmll.setController(this);        
-//        branchCtrl = new BranchController();
-//    }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         addListeners();
         fillComboBoxes();
         fillTableView();        
-//        addListeners();
-//        window.setMinWidth(800);
-//        window.setMinHeight(600);
-//        window.setScene(scene);                                               
-//        window.show();
     }
     
     private void addListeners(){            
