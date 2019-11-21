@@ -26,8 +26,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-
-public class EmployeeWindowModify implements Initializable {
+public class PanelCustomer implements Initializable {
 
     FXMLLoader fxml;
     Stage window;
@@ -52,7 +51,7 @@ public class EmployeeWindowModify implements Initializable {
         try {
             windowDefault();
         } catch (IOException ex) {
-            Logger.getLogger(EmployeeWindowModify.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PanelCustomer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -66,7 +65,7 @@ public class EmployeeWindowModify implements Initializable {
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_Window_Modify.fxml"));
                                 empBorderPane.setCenter(root);
                             } catch (IOException ex) {
-                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                                Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
                             break;
                         case "listEmployee":
@@ -74,7 +73,7 @@ public class EmployeeWindowModify implements Initializable {
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/employee_Window_List.fxml"));
                                 empBorderPane.setCenter(root);
                             } catch (IOException ex) {
-                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                                Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
                             break;
                     }

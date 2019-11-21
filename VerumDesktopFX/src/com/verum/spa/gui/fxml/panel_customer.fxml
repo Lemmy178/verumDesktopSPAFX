@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="400.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <AnchorPane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <children>
@@ -39,7 +39,7 @@
       </AnchorPane>
    </center>
    <right>
-      <VBox alignment="CENTER" minWidth="293.0" prefHeight="400.0" prefWidth="293.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" minWidth="293.0" prefHeight="400.0" prefWidth="320.0" BorderPane.alignment="CENTER">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -113,7 +113,7 @@
                         </AnchorPane>
                      </content>
                   </ScrollPane>
-                  <HBox alignment="CENTER" layoutX="19.0" layoutY="685.0" prefHeight="43.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <HBox alignment="CENTER" layoutX="19.0" layoutY="685.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <JFXButton id="btnSucces" fx:id="btnNewEmployee" buttonType="RAISED" ripplerFill="#05e860" stylesheets="@../css/GeneralStyles.css" text="Nuevo" textFill="WHITE">
                            <opaqueInsets>
