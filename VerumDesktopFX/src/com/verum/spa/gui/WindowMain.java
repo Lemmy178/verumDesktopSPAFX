@@ -28,7 +28,7 @@ import javafx.stage.Stage;
 public class WindowMain extends Application {
 
     @FXML
-    private BorderPane pnlMain;
+    private BorderPane pnlRoot;
     @FXML
     private VBox vBoxSide;
     @FXML
@@ -60,6 +60,14 @@ public class WindowMain extends Application {
     Stage window;
     Scene scene;
     Parent root = null;
+    
+    PanelBranch panelBranch;
+    PanelCustomer panelCustomer;
+    PanelEmployee panelEmployee;
+    PanelRoom panelRoom;
+    PanelTreatment panelTreatment;
+    PanelProduct panelProduct;
+    
 //    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
     public WindowMain() throws IOException {
@@ -70,6 +78,7 @@ public class WindowMain extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         fxml.load();
+        initializeComponents();
         scene = new Scene(fxml.getRoot());
         window = primaryStage;
         window.setScene(scene);
@@ -87,7 +96,7 @@ public class WindowMain extends Application {
                         case "EMPLOYEE": {
                             try {
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_employee.fxml"));
-                                pnlMain.setCenter(root);
+                                pnlRoot.setCenter(root);
 
                             } catch (IOException ex) {
                                 Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
@@ -97,21 +106,21 @@ public class WindowMain extends Application {
                         case "CUSTOMER": {
                             try {                          
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_customer.fxml"));
-                                pnlMain.setCenter(root);
+                                pnlRoot.setCenter(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }                        
                         break;                        
                         case "SERVICE":                            
-                            if(pnlMain.getCenter()!=null){
-                                pnlMain.getCenter().setVisible(false);                                
+                            if(pnlRoot.getCenter()!=null){
+                                pnlRoot.getCenter().setVisible(false);                                
                             }
                             break;
                         case "TREATMENT": {
                             try {                                
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_treatment.fxml"));
-                                pnlMain.setCenter(root);
+                                pnlRoot.setCenter(root);
 
                             } catch (IOException ex) {
                                 Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
@@ -121,31 +130,25 @@ public class WindowMain extends Application {
                         case "ROOM": {
                             try {                                
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_room.fxml"));
-                                pnlMain.setCenter(root);                               
+                                pnlRoot.setCenter(root);                               
                             } catch (IOException ex) {
                                 Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
                         break;
                         case "RESERVATION":
-                            if(pnlMain.getCenter()!=null){
-                                pnlMain.getCenter().setVisible(false);                                                                
+                            if(pnlRoot.getCenter()!=null){
+                                pnlRoot.getCenter().setVisible(false);                                                                
                             }
                             break;
-                        case "BRANCH": {
-                            try {
-                                root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_branch.fxml"));
-                                pnlMain.setCenter(root);
-                            } catch (IOException ex) {                                
-                                Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
-                            }
+                        case "BRANCH": {                           
+                            pnlRoot.setCenter(panelBranch.getPnlBranch());                                                            
                         }
                         break;
                         case "PRODUCT": {
-                            try {     
-                                PanelBranch panelBranch = new PanelBranch();                                        
+                            try {                                     
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_product.fxml"));                                
-                                pnlMain.setCenter(root);
+                                pnlRoot.setCenter(root);
                             } catch (IOException ex) {
                                 Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
@@ -154,9 +157,9 @@ public class WindowMain extends Application {
                         case "ROOM_CONTROL": {
                             try {                                
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_room_control.fxml"));
-                                pnlMain.setCenter(root);           
-                                if(pnlMain.getRight()!=null)
-                                    pnlMain.getRight().setVisible(false);
+                                pnlRoot.setCenter(root);           
+                                if(pnlRoot.getRight()!=null)
+                                    pnlRoot.getRight().setVisible(false);
                             } catch (IOException ex) {
                                 Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
@@ -167,4 +170,17 @@ public class WindowMain extends Application {
             }
         }
     }
+    
+    private void initializeComponents()throws Exception{
+        panelBranch = new PanelBranch(this);
+        panelBranch.initialize();
+//        panelCustomer = new PanelCustomer(this);
+//        PanelEmployee = new PanelEmployee(this);
+//        PanelRoom = new PanelRoom(this);
+//        PanelTreatment panelTreatment;
+//        PanelProduct panelProduct;
+    
+    }
+    
+    
 }

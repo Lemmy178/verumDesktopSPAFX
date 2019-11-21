@@ -16,14 +16,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="pnlBranch" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <AnchorPane prefHeight="400.0" prefWidth="457.0" BorderPane.alignment="CENTER">
          <children>
             <TableView fx:id="tblList" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="55.0">
-               <columns>
-                  <TableColumn prefWidth="75.0" text="C1" />
-                  <TableColumn prefWidth="75.0" text="C2" />
+               <columns>   
                </columns>
             </TableView>
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="398.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
@@ -44,7 +42,6 @@
       </AnchorPane>
    </center>
    <right>
-
       <VBox prefHeight="400.0" prefWidth="320.0" style="-fx-border-color: none;" BorderPane.alignment="CENTER">
 
          <children>
