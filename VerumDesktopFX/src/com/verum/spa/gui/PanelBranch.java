@@ -26,7 +26,7 @@ import javafx.stage.Stage;
  *
  * @author moi_3
  */
-public class BranchGUI implements Initializable{  
+public class PanelBranch implements Initializable{  
     
     @FXML TableView<Branch> tblList;    
     @FXML JFXTextField txtAddress;
@@ -151,6 +151,7 @@ public class BranchGUI implements Initializable{
         }
 
     }
+    
     @Deprecated
     private void enableFields(){        
         txtAddress.setDisable(false);
@@ -159,6 +160,7 @@ public class BranchGUI implements Initializable{
         txtName.setDisable(false);
         cmbStatus.setDisable(false);
     }
+    
     @Deprecated
     private void disableFields(){        
         txtAddress.setDisable(true);
@@ -193,6 +195,5 @@ public class BranchGUI implements Initializable{
         latitudeColumn.setCellValueFactory(new PropertyValueFactory<>("latitude"));
         longitudeColumn.setCellValueFactory(new PropertyValueFactory<>("latitude"));
         branchStatusColumn.setCellValueFactory(new PropertyValueFactory<>("latitude"));
-    }
-    
+    }    
 }

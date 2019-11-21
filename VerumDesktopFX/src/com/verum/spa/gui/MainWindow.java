@@ -142,7 +142,8 @@ public class MainWindow extends Application {
                         }
                         break;
                         case "PRODUCT": {
-                            try {                                
+                            try {     
+                                PanelBranch panelBranch = new PanelBranch();                                        
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_product.fxml"));                                
                                 pnlMain.setCenter(root);
                             } catch (IOException ex) {
