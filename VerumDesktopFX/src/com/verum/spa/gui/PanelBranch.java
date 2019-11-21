@@ -26,7 +26,7 @@ import javafx.stage.Stage;
  *
  * @author moi_3
  */
-public class BranchGUI implements Initializable{  
+public class PanelBranch implements Initializable{  
     
     @FXML TableView<Branch> tblList;    
     @FXML JFXTextField txtAddress;

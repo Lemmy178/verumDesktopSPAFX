@@ -27,7 +27,7 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnEmp" accessibleText="EMPLOYEE" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Empleado" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnEmp" accessibleText="EMPLOYEE" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Empleado" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -39,7 +39,7 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnSer" accessibleText="SERVICE" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Servicio" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnSer" accessibleText="SERVICE" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Servicio" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -51,7 +51,7 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnTre" accessibleText="TREATMENT" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Tratamiento" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnTre" accessibleText="TREATMENT" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Tratamiento" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -63,7 +63,7 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnRes" accessibleText="RESERVATION" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Reservacion" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnRes" accessibleText="RESERVATION" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Reservacion" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -75,7 +75,7 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnSal" accessibleText="ROOM" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sala" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnSal" accessibleText="ROOM" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Sala" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -87,7 +87,7 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnSto" accessibleText="BRANCH" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Sucursal" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnSto" accessibleText="BRANCH" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Sucursal" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -99,7 +99,7 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-                <JFXButton id="accessBtn" fx:id="btnPro" accessibleText="PRODUCT" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Producto" textFill="WHITE">
+                <JFXButton id="accessBtn" fx:id="btnPro" accessibleText="PRODUCT" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Producto" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -111,7 +111,7 @@
                         </ImageView>
                     </graphic>
                 </JFXButton>
-            <JFXButton id="accessBtn" fx:id="btnPro1" accessibleText="ROOM_CONTROL" buttonType="RAISED" layoutX="10.0" layoutY="447.0" prefHeight="150.0" prefWidth="150.0" ripplerFill="#8ec959" stylesheets="@../css/SideBarStyles.css" text="Control salas" textFill="WHITE">
+            <JFXButton id="accessBtn" fx:id="btnPro1" accessibleText="ROOM_CONTROL" buttonType="RAISED" layoutX="10.0" layoutY="447.0" prefHeight="150.0" prefWidth="150.0" ripplerFill="#162806" stylesheets="@../css/SideBarStyles.css" text="Control salas" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

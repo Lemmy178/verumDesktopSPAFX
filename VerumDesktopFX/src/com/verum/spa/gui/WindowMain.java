@@ -3,7 +3,7 @@
                   Ricardo Iván Ramírez Bello
  |       Course:  Spa
  |     Due Date:  10/18/2019
- |  Description:  MainWindow
+ |  Description:  WindowMain
  |                
  | Deficiencies:  Falta completar la barra superior
  *===========================================================================*/
@@ -25,7 +25,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class MainWindow extends Application {
+public class WindowMain extends Application {
 
     @FXML
     private BorderPane pnlMain;
@@ -62,8 +62,8 @@ public class MainWindow extends Application {
     Parent root = null;
 //    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
-    public MainWindow() throws IOException {
-        fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/main_window.fxml"));
+    public WindowMain() throws IOException {
+        fxml = new FXMLLoader(System.class.getResource("/com/verum/spa/gui/fxml/window_main.fxml"));
         fxml.setController(this);
     }
 
@@ -90,7 +90,7 @@ public class MainWindow extends Application {
                                 pnlMain.setCenter(root);
 
                             } catch (IOException ex) {
-                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                                Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
                         break;
@@ -99,7 +99,7 @@ public class MainWindow extends Application {
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_customer.fxml"));
                                 pnlMain.setCenter(root);
                             } catch (IOException ex) {
-                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                                Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }                        
                         break;                        
@@ -114,7 +114,7 @@ public class MainWindow extends Application {
                                 pnlMain.setCenter(root);
 
                             } catch (IOException ex) {
-                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                                Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
                         break;
@@ -123,7 +123,7 @@ public class MainWindow extends Application {
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_room.fxml"));
                                 pnlMain.setCenter(root);                               
                             } catch (IOException ex) {
-                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                                Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
                         break;
@@ -137,7 +137,7 @@ public class MainWindow extends Application {
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_branch.fxml"));
                                 pnlMain.setCenter(root);
                             } catch (IOException ex) {                                
-                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                                Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
                         break;
@@ -146,7 +146,7 @@ public class MainWindow extends Application {
                                 root = FXMLLoader.load(getClass().getResource("/com/verum/spa/gui/fxml/panel_product.fxml"));                                
                                 pnlMain.setCenter(root);
                             } catch (IOException ex) {
-                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                                Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
                         break;
@@ -157,7 +157,7 @@ public class MainWindow extends Application {
                                 if(pnlMain.getRight()!=null)
                                     pnlMain.getRight().setVisible(false);
                             } catch (IOException ex) {
-                                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                                Logger.getLogger(WindowMain.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
                         break;
