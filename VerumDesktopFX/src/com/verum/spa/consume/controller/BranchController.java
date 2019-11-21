@@ -24,8 +24,8 @@ public class BranchController {
     
     private static Branch branch = new Branch();
     private static BranchConsumeREST braREST = new BranchConsumeREST();
-
-    public String addBranchController(String branchName, String branchAddress, double latitude, double longitude, boolean branchStatus) {        
+    
+    public String addBranch(String branchName, String branchAddress, double latitude, double longitude, boolean branchStatus) {        
             branch.setBranchName(branchName);
             branch.setBranchAddress(branchAddress);
             branch.setLatitude(latitude);
@@ -35,7 +35,7 @@ public class BranchController {
     }
     
 
-    public String modifyBranchController(int branchId, String branchName, String branchAddress, double latitude, double longitude, boolean branchStatus) {        
+    public String modifyBranch(int branchId, String branchName, String branchAddress, double latitude, double longitude, boolean branchStatus) {        
             branch.setBranchId(branchId);
             branch.setBranchName(branchName);
             branch.setBranchAddress(branchAddress);
@@ -46,7 +46,7 @@ public class BranchController {
     }
     
 
-    public String logicalDelteController(int branchId) {
+    public String logicalDelte(int branchId) {
         branch.setBranchId(branchId);
         return braREST.logicalDeleteBranch(branch.getBranchId());
     }
